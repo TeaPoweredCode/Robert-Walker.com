@@ -1,10 +1,34 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
+  siteMetadata: {
+    title: `Robert Walker • Tea powered coder`,
+    description: `Portfolio site`,
+    twitterUsername: `@MrLuxan`,
+    image: `./favicon.ico`,
+    siteUrl: `https://www.Robert-Walker.com`,
+  },
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    'gatsby-transformer-json',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,   
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projectData/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+  ],
 }

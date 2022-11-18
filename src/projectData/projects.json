@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "title": "ChronoGG Desktop",
+        "projectType": "Desktop application",
+        "slug": "chronogg-desktop",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "../images/thumbs/ChronoGGDesktop.jpg",
+        "stack" : ["C#", "WPF"],
+        "projectLinks": {
+            "GitHub": "https://github.com/MrLuxan/ChronoGGDesktop"
+            }
+    },
+    {
+        "id": 2,
+        "title": "Simple Armory - Toy Box",
+        "projectType": "Chrome extension",
+        "slug": "simple-armory-toy-box",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "../images/thumbs/ToyBox.jpg",
+        "stack" : ["JS", "HTML", "CSS"],
+        "projectLinks": {
+            "GitHub": "https://github.com/MrLuxan/SimpleArmory-ToyBox"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Right click raid",
+        "projectType": "Web extension",
+        "slug": "right-click-raid",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "../images/thumbs/RightClickRaid.jpg",
+        "stack" : ["JS", "HTML", "CSS"],
+        "projectLinks": {
+            "GitHub": "https://github.com/MrLuxan/Right-Click-Raid",
+            "Chrome": "a",
+            "Firefox": "b"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Twitch Favourites",
+        "projectType": "Web extension",
+        "slug": "twitch-favourites",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "../images/thumbs/TwitchFavourites.jpg",
+        "stack" : ["TypeScript", "JS", "HTML", "CSS"],
+        "projectLinks": {
+            "GitHub": "https://github.com/MrLuxan/TwitchFavourites",
+            "Chrome": "a",
+            "Firefox": "b"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Profile Post-it",
+        "projectType": "Web extension",
+        "slug": "profile-post-it",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "../images/thumbs/ProfilePostIt.jpg",
+        "stack" : ["JS", "HTML", "CSS"],
+        "projectLinks": {
+            "GitHub": "https://github.com/MrLuxan/ProfilePost-it",
+            "Chrome": "a",
+            "Firefox": "b"
+        }
+    },
+    {
+        "id": 5,
+        "title": "WTF Is On Steam",
+        "projectType": "Chrome extension",
+        "slug": "wtf-is-on-steam",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "../images/thumbs/WTFIsOnSteam.jpg",
+        "stack" : ["JS", "HTML", "CSS"],
+        "projectLinks": {}
+    }
+]

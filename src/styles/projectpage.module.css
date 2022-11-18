@@ -1,0 +1,58 @@
+@media screen and (min-width: 600px) {
+    .projectPage{
+        padding: 0 50px;        
+    }
+
+    .projectPageBody {
+        padding: 0 50px 20px 50px ;        
+    }
+}
+
+.projectPageBody{
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.stackIcon{
+    height: 12px;
+    margin: 0 5px 0 10px;
+}
+
+.projectBanner{
+    height:"280px";
+    margin:"20px 0";
+}
+
+.RightClickRaidBanner{
+    height: 280px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #a970ff;
+    overflow: hidden;
+    position: relative;
+}
+
+.RightClickRaidBannerText{
+    font-size: 64px;
+    color: #b17eff;
+    transform: translate(-140px, -20px);
+    width: 140%;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ProfilePostIt{
+    text-align: center;
+    background-color: #eaebef;
+    margin: 20px 0;
+}
+
+.TwitchFavourites{
+    text-align: center;
+    background-color: #201f24;
+    margin: 20px 0;
+}

@@ -1,0 +1,59 @@
+.cv{
+    max-width: 900px;
+    margin-left: 50px;
+    padding-bottom: 50px;
+}
+
+.cv hr{
+    margin: 7.5px 0;
+}
+
+.cv h3{
+    margin: 10px 0;
+}
+
+.cvPagebrake {
+    page-break-after: always;
+}
+
+.contactDetails{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.CodingExperience{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.CodingExperience ul
+{
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.CodingExperience ul ul
+{ 
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.CodingExperience ul ul li:before 
+{
+    content: "+";
+    margin-right: 4px;
+}
+
+
+@media print {
+    .cv{
+        max-width: 900px;
+        margin-left: 0px;
+        padding-bottom: 0px;
+    }
+}
