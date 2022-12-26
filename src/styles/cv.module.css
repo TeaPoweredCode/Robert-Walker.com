@@ -49,6 +49,11 @@
     margin-right: 4px;
 }
 
+.cvSegment{}
+.experience{}
+.employment{}
+.education{}
+
 
 @media print {
     .cv{

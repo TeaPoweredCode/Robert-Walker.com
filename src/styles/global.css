@@ -44,3 +44,7 @@ p {
     margin: 106px 10px 10px 10px; /* Same as the width of the sidenav */
   }
 }
+
+.fslightbox-toolbar-button:first-child {
+  display: none !important;
+}

@@ -1,22 +1,22 @@
 import React from "react"
+
+import { graphql } from "gatsby"
+import { StaticImage} from "gatsby-plugin-image"
+
+import { SEO } from "../../components/seo"
+
 import Layout from "../../components/Layout"
 import ProjectPage from "../../components/ProjectPage"
-import {SEO} from "../../components/seo"
+import LightBoxGallery from "../../components/LightBoxGallery"
 
 import * as projectpageStyle from '../../styles/projectpage.module.css'
 
-
-import { StaticImage } from "gatsby-plugin-image"
-
-
-export default function ProfilePostIt(props) {
-
-
+export default function ProfilePostIt({data}) {
   return (
     <Layout>
       <ProjectPage slug={"profile-post-it"}>
         <div className={projectpageStyle.ProfilePostIt}>
-          <StaticImage src= "../../images/featured/ProfilePostIt-banner.jpg"/>
+          <StaticImage src= "../../projectData/profile-post-it/ProfilePostIt-banner.jpg"/>
         </div>
         <div className={projectpageStyle.projectPageBody}>
           <div>          
@@ -25,6 +25,7 @@ export default function ProfilePostIt(props) {
           <div>
             This gadget allows you to see the daily game right on your desktop reminder.
           </div>
+          <LightBoxGallery data={data}/>
         </div>
 
       </ProjectPage>
@@ -35,3 +36,25 @@ export default function ProfilePostIt(props) {
 export const Head = () => (
   <SEO title="Robert Walker • Profile Post-it" />
 )
+
+export const pageQuery = graphql`
+  query {
+    gallery: allFile(filter: {relativeDirectory: {eq: "profile-post-it/images"}}) {
+      edges {
+        node {
+          id
+          base
+          publicURL
+          childrenImageSharp {
+            gatsbyImageData(
+              webpOptions: {quality: 50}
+              transformOptions: {fit: COVER}
+              placeholder: BLURRED
+              height: 150
+            )
+          }
+        }
+      }
+    }
+  }
+`

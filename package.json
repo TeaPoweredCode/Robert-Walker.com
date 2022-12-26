@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "robert-walker.com",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A portfolio site",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "fslightbox-react": "^1.6.2-2",
     "gatsby": "^4.21.1",
     "gatsby-plugin-image": "^2.22.0",
     "gatsby-plugin-sharp": "^4.22.0",
@@ -28,9 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/MrLuxan/Robert-Walker.com"
   }
 }

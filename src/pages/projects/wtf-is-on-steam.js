@@ -1,15 +1,21 @@
 import React from "react"
+
+import { graphql } from "gatsby"
+import { StaticImage} from "gatsby-plugin-image"
+
+import { SEO } from "../../components/seo"
+
 import Layout from "../../components/Layout"
 import ProjectPage from "../../components/ProjectPage"
-import { SEO } from "../../components/seo"
-import * as projectpageStyle from '../../styles/projectpage.module.css'
-import { StaticImage } from "gatsby-plugin-image"
+import LightBoxGallery from "../../components/LightBoxGallery"
 
-export default function WTFIsOnSteam(props) {
+import * as projectpageStyle from '../../styles/projectpage.module.css'
+
+export default function WTFIsOnSteam({data}) {
   return (
     <Layout>
       <ProjectPage slug={"wtf-is-on-steam"}>
-        <StaticImage src= "../../images/featured/WTFIsOnSteam-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
+        <StaticImage src= "../../projectData/wtf-is-on-steam/WTFIsOnSteam-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
         <div className={projectpageStyle.projectPageBody}>
           <div>          
             Chrono.GG was a popular video game store ran from 2015 to late 2020. The site's gimmick was that it only sold one game a day but at a large discount.          
@@ -17,6 +23,7 @@ export default function WTFIsOnSteam(props) {
           <div>
             This gadget allows you to see the daily game right on your desktop reminder.
           </div>
+          <LightBoxGallery data={data}/>
         </div>
       </ProjectPage>
     </Layout>
@@ -29,3 +36,24 @@ export const Head = () => (
   <SEO title="Robert Walker • WTF Is On Steam"/>
 )
 
+export const pageQuery = graphql`
+  query {
+    gallery: allFile(filter: {relativeDirectory: {eq: "wtf-is-on-steam/images"}}) {
+      edges {
+        node {
+          id
+          base
+          publicURL
+          childrenImageSharp {
+            gatsbyImageData(
+              webpOptions: {quality: 50}
+              transformOptions: {fit: COVER}
+              placeholder: BLURRED
+              height: 150
+            )
+          }
+        }
+      }
+    }
+  }
+`

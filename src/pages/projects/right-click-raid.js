@@ -1,20 +1,22 @@
 import React from "react"
+
+import { graphql } from "gatsby"
+import { StaticImage} from "gatsby-plugin-image"
+
+import { SEO } from "../../components/seo"
+
 import Layout from "../../components/Layout"
 import ProjectPage from "../../components/ProjectPage"
-import {SEO} from "../../components/seo"
+import LightBoxGallery from "../../components/LightBoxGallery"
 
 import * as projectpageStyle from '../../styles/projectpage.module.css'
 
-
-import { StaticImage } from "gatsby-plugin-image"
-
-
-export default function RightClickRaid(props) {
+export default function RightClickRaid({data}) {
   return (
     <Layout>
       <ProjectPage slug={"right-click-raid"}>
         <div className={projectpageStyle.RightClickRaidBanner}>
-          <StaticImage src= "../../images/featured/RightClickRaid-bannerMini.png" style={{width:"389px", position: "absolute", top:"50%", left:"50%", transform: "translate(-50%, -50%)", zIndex:1}}/>
+          <StaticImage src= "../../projectData/right-click-raid/RightClickRaid-bannerMini.png" style={{width:"389px", position: "absolute", top:"50%", left:"50%", transform: "translate(-50%, -50%)", zIndex:1}}/>
           <div className={projectpageStyle.RightClickRaidBannerText}>            
             right-click-raid right-click-raid right-click-raid right-click-raid right-click-raid right-click-raid
             right-click-raid right-click-raid right-click-raid right-click-raid right-click-raid right-click-raid
@@ -29,8 +31,8 @@ export default function RightClickRaid(props) {
           <div>
             This gadget allows you to see the daily game right on your desktop reminder.
           </div>
+          <LightBoxGallery data={data}/>
         </div>
-
       </ProjectPage>
     </Layout>
   )
@@ -39,3 +41,25 @@ export default function RightClickRaid(props) {
 export const Head = () => (
   <SEO title="Robert Walker • Profile Post-it" />
 )
+
+export const pageQuery = graphql`
+  query {
+    gallery: allFile(filter: {relativeDirectory: {eq: "right-click-raid/images"}}) {
+      edges {
+        node {
+          id
+          base
+          publicURL
+          childrenImageSharp {
+            gatsbyImageData(
+              webpOptions: {quality: 50}
+              transformOptions: {fit: COVER}
+              placeholder: BLURRED
+              height: 150
+            )
+          }
+        }
+      }
+    }
+  }
+`
