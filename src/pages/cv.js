@@ -45,9 +45,9 @@ export default function Cv() {
               Core Skills
               <ul>
                 <li> C# </li>
-                <li> Node <ul><li>NW.js</li></ul></li>                
-                <li> Frontend Technologies <ul><li> Html / CSS / SCSS </li><li> Javascript</li><li> React</li></ul></li>
-                <li> Database Technologies <ul><li> MySQL / SQL </li></ul></li>
+                <li> Node <ul></ul></li>                
+                <li> Frontend Technologies <ul><li> Html / CSS / SCSS </li><li> Javascript</li><li> React<br /><span style={{paddingLeft:"20px"}}> - Gatsby</span></li></ul></li>
+                <li> Database Technologies <ul><li> MySQL / SQL </li><li>GraphQL</li></ul></li>
                 <li> Python <ul><li>Django</li></ul></li>
                 <li> Other <ul><li> Web extensions<br/> <span style={{paddingLeft:"20px"}}> - Chrome / Firefox </span></li></ul></li>
               </ul>

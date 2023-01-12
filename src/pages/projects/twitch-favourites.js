@@ -13,19 +13,21 @@ import * as projectpageStyle from '../../styles/projectpage.module.css'
 
 export default function TwitchFavourites({data}) {
 
-
   return (
     <Layout>
       <ProjectPage slug={"twitch-favourites"}>
       <StaticImage src= "../../projectData/twitch-favourites/TwitchFavourites-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
         <div className={projectpageStyle.projectPageBody}>
-          <div>          
-            Chrono.GG was a popular video game store ran from 2015 to late 2020. The site's gimmick was that it only sold one game a day but at a large discount.          
-          </div>
-          <div>
-            This gadget allows you to see the daily game right on your desktop reminder.
-          </div>
-          <LightBoxGallery data={data}/>
+          <p>          
+            Finding your top streamers in the list of everyone you follow can be a pain on twitch,
+            especially when they're smaller channels that can be pushed down off the list and hidden behind the more button.
+          </p>
+          <p>
+            This web extension makes it much easier to find your favourite channels. 
+            Simply go to a channel and click the new favourite button to add them to the new favourite list.
+            The extension can be set to send desktop notification alerting you when a favourite streamer goes live.
+          </p>
+          <LightBoxGallery title="Project gallery" data={data}/>
         </div>
       </ProjectPage>
     </Layout>
@@ -38,7 +40,10 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query {
-    gallery: allFile(filter: {relativeDirectory: {eq: "twitch-favourites/images"}}) {
+    gallery: allFile(
+      filter: {relativeDirectory: {eq: "twitch-favourites/images"}}
+      sort: {order: ASC, fields: base}
+    ) {
       edges {
         node {
           id
@@ -49,7 +54,7 @@ export const pageQuery = graphql`
               webpOptions: {quality: 50}
               transformOptions: {fit: COVER}
               placeholder: BLURRED
-              height: 150
+              width: 400
             )
           }
         }

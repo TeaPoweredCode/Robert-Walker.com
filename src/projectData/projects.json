@@ -33,8 +33,8 @@
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
             "GitHub": "https://github.com/MrLuxan/Right-Click-Raid",
-            "Chrome": "a",
-            "Firefox": "b"
+            "Chrome": "",
+            "Firefox": ""
         }
     },
     {
@@ -46,9 +46,7 @@
         "thumb": "./twitch-favourites/TwitchFavourites-project.jpg",
         "stack" : ["TypeScript", "JS", "HTML", "CSS"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/TwitchFavourites",
-            "Chrome": "a",
-            "Firefox": "b"
+            "GitHub": "https://github.com/MrLuxan/TwitchFavourites"
         }
     },
     {
@@ -60,9 +58,7 @@
         "thumb": "./profile-post-it/ProfilePostIt-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/ProfilePost-it",
-            "Chrome": "a",
-            "Firefox": "b"
+            "GitHub": "https://github.com/MrLuxan/ProfilePost-it"
         }
     },
     {

@@ -19,13 +19,14 @@ export default function ChronoGGDesktop({data}) {
         <StaticImage src="../../projectData/chronogg-desktop/ChronoGGDesktop-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
         <div className={projectpageStyle.projectPageBody}>
           <p>          
-            Chrono.GG was a popular video game store ran from 2015 to late 2020. The site's main gimmick was that it only sold one game a day but at a large discount.          
-            The other angle the site tock was to work closely with content creators to help promote the daily offer in turn they they offered a generous a affiliate scheme.
+            Chrono.GG was a popular online video game store ran from 2015 to late 2020.
+            The site aimed to defy convention by instead of having a cluttered store with everything where individual games would easily get lost and never seen,
+            instead it would work with indie developers and influencers offer just one game day at a huge discount while marketing it though a huge number of youtubers and live streamers.
           </p>
           <p>
-            This gadget allows you to see the daily game right on your desktop reminder.            
+            This light-weight desktop gadget spotlights the daily game so that you won't miss out on the great deals.
           </p>
-          <LightBoxGallery data={data}/>
+          <LightBoxGallery title="Project gallery" data={data}/>
         </div>        
       </ProjectPage>
     </Layout>
@@ -38,7 +39,10 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query {
-    gallery: allFile(filter: {relativeDirectory: {eq: "chronogg-desktop/images"}}) {
+    gallery: allFile(
+      filter: {relativeDirectory: {eq: "chronogg-desktop/images"}}
+      sort: {order: ASC, fields: base}
+      ) {
       edges {
         node {
           id
@@ -49,7 +53,6 @@ export const pageQuery = graphql`
               webpOptions: {quality: 50}
               transformOptions: {fit: COVER}
               placeholder: BLURRED
-              height: 150
             )
           }
         }

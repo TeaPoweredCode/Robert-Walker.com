@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-
 import {GatsbyImage } from "gatsby-plugin-image"
 import FsLightbox from "fslightbox-react";
 
+import * as styles from '../styles/lightboxgallery.module.css'
+
 export default function LightBoxGallery(props) {
 
-    const  {data} = props;
+    const  {data, title} = props;
 
     let galleryImaegs = [];
     {data.gallery.edges.map(({node}) =>
@@ -25,17 +26,20 @@ export default function LightBoxGallery(props) {
 	}
 
   return (
-    <div>
+    <div className={styles.lightBoxGallery}>
+      {title != null && <h1> - {title} - </h1>}
+      <div className={styles.lightBoxGalleryImages}>
         {data.gallery.edges.map(({node},index) =>          
           <span key={node.id} onClick={() => openLightboxOnSlide(index+1)}>
             <GatsbyImage image={node.childrenImageSharp[0].gatsbyImageData} alt={node.base.split('.')[0]}/>
           </span>
         )}
-        <FsLightbox
-          toggler={lightboxController.toggler}
-          sources={galleryImaegs}
-          slide={lightboxController.slide}
-        />
+      </div>
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={galleryImaegs}
+        slide={lightboxController.slide}
+      />
     </div>
   )
 }

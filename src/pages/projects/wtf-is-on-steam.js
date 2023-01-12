@@ -8,6 +8,7 @@ import { SEO } from "../../components/seo"
 import Layout from "../../components/Layout"
 import ProjectPage from "../../components/ProjectPage"
 import LightBoxGallery from "../../components/LightBoxGallery"
+import ExternalLink from "../../components/ExternalLink"
 
 import * as projectpageStyle from '../../styles/projectpage.module.css'
 
@@ -17,19 +18,23 @@ export default function WTFIsOnSteam({data}) {
       <ProjectPage slug={"wtf-is-on-steam"}>
         <StaticImage src= "../../projectData/wtf-is-on-steam/WTFIsOnSteam-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
         <div className={projectpageStyle.projectPageBody}>
-          <div>          
-            Chrono.GG was a popular video game store ran from 2015 to late 2020. The site's gimmick was that it only sold one game a day but at a large discount.          
-          </div>
-          <div>
-            This gadget allows you to see the daily game right on your desktop reminder.
-          </div>
-          <LightBoxGallery data={data}/>
+          <p>          
+            The '<ExternalLink link="https://www.youtube.com/playlist?list=PLTFohR7GUZYcD8t4bbSKYpnsjMWf19Qgo" text="WTF is... *Game*"/>' series was a first impressions video game youtube series by John Bain aka (<ExternalLink link="https://www.youtube.com/@cynicalbrit" text="TotalBiscuit"/>). 
+            At his height TotalBiscuit was releasing a video every day getting 300-500k views.
+          </p>
+          <p>
+            The 'WTF is on Steam' extension tried to help people make more informed decisions on their game purchases. 
+            Firstly while browsing <ExternalLink link="https://store.steampowered.com/" text="Steam"/>'s store it highlights games that had an associated review. Then secondly 
+            embedded the 'WTF is' video directly onto a game's steam page.
+          </p>
+          <p>
+            Unfortunately TotalBiscuit passed away in 2018 ending the series.
+          </p>
+          <LightBoxGallery title="Project gallery" data={data}/>
         </div>
       </ProjectPage>
     </Layout>
   )
-
-  //The WTF is on Steam chrome extension takes the videos of the popular <a href="https://www.youtube.com/user/TotalHalibut" target="_blank">TotalBiscuit, The Cynical Brit</a> and adds them steam.com pages. The extension takes TB\'s WTF series , 15 minutes of game and Port Report and adds it to the associated game\'s page<br><br><a>Chrome</a> - coming at some point<br>
 }
 
 export const Head = () => (
@@ -38,7 +43,10 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query {
-    gallery: allFile(filter: {relativeDirectory: {eq: "wtf-is-on-steam/images"}}) {
+    gallery: allFile(
+      filter: {relativeDirectory: {eq: "wtf-is-on-steam/images"}}
+      sort: {order: ASC, fields: base}
+      ) {
       edges {
         node {
           id
@@ -49,7 +57,7 @@ export const pageQuery = graphql`
               webpOptions: {quality: 50}
               transformOptions: {fit: COVER}
               placeholder: BLURRED
-              height: 150
+              width: 400
             )
           }
         }

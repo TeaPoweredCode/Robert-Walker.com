@@ -19,13 +19,18 @@ export default function ProfilePostIt({data}) {
           <StaticImage src= "../../projectData/profile-post-it/ProfilePostIt-banner.jpg"/>
         </div>
         <div className={projectpageStyle.projectPageBody}>
-          <div>          
-            Chrono.GG was a popular video game store ran from 2015 to late 2020. The site's gimmick was that it only sold one game a day but at a large discount.          
-          </div>
-          <div>
-            This gadget allows you to see the daily game right on your desktop reminder.
-          </div>
-          <LightBoxGallery data={data}/>
+          <p>
+          Ever wanted to keep track of how you know your obscure Facebook friends, 
+          who in your group owes you money or just use Facebook as a rolodex storing phone numbers, addresses and important dates.
+          </p>
+          <p>          
+            Profile Post-it <s>is</s> was a web extension for the Chrome and Firefox browsers that adds a note element to Facebook profile
+            pages allowing you to keep your store information on a person or organisation.
+          </p>
+          <p>
+            Unfortunately Facebook claimed this extension breached their IP and issued a copyright request with google to have the extension removed for their store. 
+          </p>
+          <LightBoxGallery title="Project gallery" data={data}/>
         </div>
 
       </ProjectPage>
@@ -39,7 +44,10 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query {
-    gallery: allFile(filter: {relativeDirectory: {eq: "profile-post-it/images"}}) {
+    gallery: allFile(
+      filter: {relativeDirectory: {eq: "profile-post-it/images"}}
+      sort: {order: ASC, fields: base}
+      ) {
       edges {
         node {
           id
@@ -50,7 +58,7 @@ export const pageQuery = graphql`
               webpOptions: {quality: 50}
               transformOptions: {fit: COVER}
               placeholder: BLURRED
-              height: 150
+              width: 400
             )
           }
         }

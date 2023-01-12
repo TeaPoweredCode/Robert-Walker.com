@@ -35,7 +35,6 @@ export default function Hexagon(props) {
     props.children
   ];
   
-
   const SvgWapper = (c) => {
     return(
       <svg id="color-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" width={shapeData.width + "px"} height={shapeData.height + "px"} >  
@@ -47,7 +46,7 @@ export default function Hexagon(props) {
   const HexExternalLink = () => {
     return (
       <SvgWapper>
-        <a href={link}  target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           {HexContent}       
         </a>
       </SvgWapper>

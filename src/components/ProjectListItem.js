@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image"
-import ProjectLink from './ProjectLink'
+
+import ProjectLinkList from './ProjectLinkList'
 
 import * as styles from '../styles/projectitem.module.css'
 
 export default function ProjectListItem(props) {
   const project = props.project;
-  const links = project.projectLinks;
+  const projectLinks = project.projectLinks;
 
   return (
   <div className={[styles.gridItem, styles.projectItem].join(" ")}>
@@ -19,9 +20,7 @@ export default function ProjectListItem(props) {
       <h2>{project.projectType}</h2>
     </Link>
     <div className={styles.projectLinks}>
-        {!!links.GitHub > 0 && <ProjectLink icon="github" link={links.GitHub}/> }
-        {!!links.Chrome > 0 && <ProjectLink icon="chrome" link={links.Chrome}/> }
-        {!!links.Firefox > 0 && <ProjectLink icon="firefox" link={links.Firefox}/> }
+      <ProjectLinkList links={projectLinks}/>
     </div>
   </div>
   )

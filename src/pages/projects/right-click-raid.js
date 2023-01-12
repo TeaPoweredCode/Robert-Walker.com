@@ -25,13 +25,13 @@ export default function RightClickRaid({data}) {
           </div>
         </div>
         <div className={projectpageStyle.projectPageBody}>
-          <div>          
-            Chrono.GG was a popular video game store ran from 2015 to late 2020. The site's gimmick was that it only sold one game a day but at a large discount.          
-          </div>
-          <div>
-            This gadget allows you to see the daily game right on your desktop reminder.
-          </div>
-          <LightBoxGallery data={data}/>
+          <p>          
+            Are you a twitch streamer and hate having to type out a channel's name or worst has a typo ever meant that you raided the wrong channel ?
+          </p>
+          <p>
+            Right-Click-Raid is a web extension that makes raiding easy, simply right click their profile, or a name or link in check add select raid form the dropdown menu.
+          </p>
+          <LightBoxGallery title="Project gallery" data={data}/>
         </div>
       </ProjectPage>
     </Layout>
@@ -44,7 +44,10 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query {
-    gallery: allFile(filter: {relativeDirectory: {eq: "right-click-raid/images"}}) {
+    gallery: allFile(
+      filter: {relativeDirectory: {eq: "right-click-raid/images"}}
+      sort: {order: ASC, fields: base}
+      ) {
       edges {
         node {
           id
@@ -55,7 +58,7 @@ export const pageQuery = graphql`
               webpOptions: {quality: 50}
               transformOptions: {fit: COVER}
               placeholder: BLURRED
-              height: 150
+              width: 500
             )
           }
         }
