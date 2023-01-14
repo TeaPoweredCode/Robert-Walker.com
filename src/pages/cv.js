@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { SEO } from "../components/seo"
+import ExternalLink from "../components/ExternalLink"
+
 import * as styles from '../styles/cv.module.css'
 
 export default function Cv() {
@@ -30,8 +32,8 @@ export default function Cv() {
           <h1 >Robert Walker</h1>
           <div className={styles.contactDetails}>
             <ul>
-              <li>Robert-Walker.com</li>
-              <li>github.com/MrLuxan</li>
+              <li><ExternalLink link="https://www.robert-walker.com/" text="Robert-Walker.com" /></li>
+              <li><ExternalLink link="https://github.com/MrLuxan" text="github.com/MrLuxan"/></li>
             </ul>
             <ul>
               <li>Email: email@Robert-Walker.com</li>              
@@ -39,14 +41,14 @@ export default function Cv() {
             </ul>
           </div>
           <hr/>
-          Sheffield , UK based software engineer specialising in windows desktop applications and web development with experience with both front and back end technologies.          
+          Sheffield, UK based software engineer specialising in Windows desktop applications and web development with experience in both front and back end technologies.          
 	      </div>
 
         <div className={[styles.cvSegment, styles.experience].join(' ')}>
           <h3>Professional experience</h3>
           <div className={styles.CodingExperience}>
             <div>
-            Current Core Skills
+            Current Core Skills:
               <ul>
                 <li> C# </li>
                 <li> Node <ul></ul></li>                
@@ -57,7 +59,7 @@ export default function Cv() {
               </ul>
             </div>
             <div>
-              Other Industry experience
+              Other Industry experience:
               <ul>
                 <li>VB</li>
                 <li>Java<ul><li>Android development</li></ul></li>
@@ -74,9 +76,9 @@ export default function Cv() {
           <h3>Employment</h3>
           <EmploymentPlace place="GWD" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - Present" jobTitle="Software Engineer">
             <p>              
-              GWD prides its self on helping socially-minded organisations and charities transition to digital systems.
-              While here my primary role has been to work on the company's mian two products the "Donation Station" a contactless fundraising system 
-              and the "Discovery Station" a self-service library kiosk. Both applcations are writen as react apps that then use NW.js to package them for windows desktop.
+              GWD prides itself on helping socially-minded organisations and charities transition to digital systems.
+              While here my primary role has been to work on the company's main two products: the "Donation Station" a contactless fundraising system; 
+              and the "Discovery Station" a self-service library kiosk. Both applications are written as react apps that then use NW.js to package them for Windows desktop.
             </p>
             <p>                            
               The other aspect of GWD platform is the "Device Service", a C# application which runs as a web service that creates api endpoints that are used by the
@@ -84,32 +86,32 @@ export default function Cv() {
               the performance of cash acceptors, rfid tag readers and barcode readers.
             </p>
             <p>
-              I also expanded the product range, developing new systems called "Experiential Giving" a companion product for the Donation Station.
-              Designed to help drive engagement and visibility, Experiential Giving couples a large video display with the Donation Station tablet.
-              As a user moves though the step of making a donation different pages trigger events on the large screen creating interactions and rewards.
+              I also expanded the product range, developing  the new "Experiential Giving" system, a companion product for the Donation Station.
+              Designed to help drive engagement and visibility. Experiential Giving couples a large video display with the Donation Station tablet.
+              As a user moves though the steps of making a donation, different pages trigger events on the large screen creating interactions and rewards.
               The system uses a node server and websockets to allow the tablet and device running the video display to communicate.
             </p>
           </EmploymentPlace>
 
-          <div className={styles.cvPagebrake}> </div>
+          <div className={styles.cvPagebrake}></div>
 
           <EmploymentPlace place="Pryor Marking Technology" site="Pryormarking.com" siteUrl="http://www.pryormarking.com/" time="June 2013 - June 2021" jobTitle="Software Engineer">                              
             <p>
-              During my time with Pryors i worked on a wide range of projects.
-              My main task was developing a windows desktop application "Traceable-IT", a complex marking and traceability package written in C# and VB.
-			        I was responsible for the implementing of new core features, integrating new hardware such as ABB Robots , RFID readers and Cognex vision systems. 
-			        I also work closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke soltions.
-			        For the last two years with the company I headed development of the next generation of traceability software for distribution in the Us.
+              During my time with Pryors, I worked on a wide range of projects.
+              My main task was developing a Windows desktop application "Traceable-IT", a complex marking and traceability package written in C# and VB.
+			        I was responsible for the implementation of new core features, integrating new hardware such as ABB Robots , RFID readers and Cognex vision systems. 
+			        I also work closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke solutions.
+			        For the last two years with the company I headed development of the next generation of traceability software for distribution in the global markets.
             </p>
             <p>
-              Secondly with my background in web development I've was tasked with developing of a range a web sites. These have included;
-              A ticketing and project management tool, sites for manage language translations and documentation for the desktop apps, 
+              Secondly, with my background in web development I was tasked with developing a range of web sites. These have included:
+              A ticketing and project management tool; sites for managing language translations and documentation for the desktop apps; 
               web apis for tracking parts in manufacturing plants and the latest site I worked on was a software licence keys management.
             </p>
             <p>
-              Finally due to my enthusiasm for exploring diffrent technologies I was often given any project that fell outside the standard skill set of the team. 
-			        This lead me to developing an number of Android application including a government contract to help prevent metal theft,
-              an RFID tag reading application that runs on windows pocket PCs for JLR and  
+              Finally due to my enthusiasm for exploring different technologies I was often given any project that fell outside the standard skill set of the team. 
+			        This lead me to developing a number of Android application including a government contract to help prevent metal theft,
+              an RFID tag reading application that runs on Windows pocket PCs for JLR and  
               building a "Pick-To-Light" system using Arduinos and neo pixel LEDs to aid in the assembly of machines.
             </p>
           </EmploymentPlace>
@@ -122,8 +124,8 @@ export default function Cv() {
             </p> 
             <p>
               Apart from improving my design and development skills, I also learnt a significant amount about running a business learning from both our successes and our failures.
-              We became versed in; finding and managing clients, gathering specifications, managing expectations and the general clinet communitcation, 
-              skills I've been able to apply directly in my later career. I've also been able to share the business knowlage I gained with a number of friends 
+              We became versed in; finding and managing clients, gathering specifications, managing expectations and the general client communication. 
+              These are skills I've been able to apply directly in my later career. I've also been able to share the business  knowledge that I gained with a number of friends 
               who have gone onto set up their own businesses or go self-employed.
             </p>
           </EmploymentPlace>          
