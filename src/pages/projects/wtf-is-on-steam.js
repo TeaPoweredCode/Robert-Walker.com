@@ -20,15 +20,15 @@ export default function WTFIsOnSteam({data}) {
         <div className={projectpageStyle.projectPageBody}>
           <p>          
             The '<ExternalLink link="https://www.youtube.com/playlist?list=PLTFohR7GUZYcD8t4bbSKYpnsjMWf19Qgo" text="WTF is... *Game*"/>' series was a first impressions video game youtube series by John Bain aka (<ExternalLink link="https://www.youtube.com/@cynicalbrit" text="TotalBiscuit"/>). 
-            At his height TotalBiscuit was releasing a video every day getting 300-500k views.
+            At his height, TotalBiscuit was releasing a video every day getting 300-500k views.
           </p>
           <p>
             The 'WTF is on Steam' extension tried to help people make more informed decisions on their game purchases. 
-            Firstly while browsing <ExternalLink link="https://store.steampowered.com/" text="Steam"/>'s store it highlights games that had an associated review. Then secondly 
-            embedded the 'WTF is' video directly onto a game's steam page.
+            Firstly, while browsing <ExternalLink link="https://store.steampowered.com/" text="Steam"/>'s store it highlights games with associated review.
+            Then secondly embedded the 'WTF is' video directly onto a game's steam page.
           </p>
           <p>
-            Unfortunately TotalBiscuit passed away in 2018 ending the series.
+           Sadly, TotalBiscuit passed away in 2018 ending the series.
           </p>
           <LightBoxGallery title="Project gallery" data={data}/>
         </div>

@@ -41,7 +41,7 @@ p {
 
 @media screen and (max-width: 600px) {
   .main {
-    margin: 106px 10px 10px 10px; /* Same as the width of the sidenav */
+    margin: 106px 10px 10px 10px; /* Same as the height of the sidenav */
   }
 }
 

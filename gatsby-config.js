@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Robert Walker • Tea powered coder`,
-    description: `Portfolio site`,
+    description: `Sheffield Uk based software engineer`,
     twitterUsername: `@MrLuxan`,
     image: `./favicon.ico`,
     siteUrl: `https://www.Robert-Walker.com`,

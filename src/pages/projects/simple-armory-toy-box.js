@@ -21,11 +21,11 @@ export default function SimpleArmoryToyBox({data}) {
           <p> 
             <ExternalLink link="https://simplearmory.com/" text="Simple Armory"/> is a clean, user-friendly depiction of a World of Warcraft character's armoury page.            
             The site makes it easy to track the progress of the different in-game collections such as achievements, reputations, mounts and pets.
-            Due to the limitations of the Blizzard API it isn't possible to track a player's toy collection so wasn't included on the site.
-            This Chrome extension added an extra Toys page and allowed users to manually track what they collected.          
+            Due to the limitations of the Blizzard API it isn't possible to track a player's toy collection so Simple Armory wasn't able to included on them site.
+            This Chrome extension solved this issue by adding an extra Toys page and allowed users to manually track what they had collected.         
           </p>
           <p>
-            Updates on this extension stop once simplearmory implmented thire own way of tracking toy data. 
+            Updates on this extension stopped once simplearmory implemented its own way of tracking toy data with an in game addon.
           </p>
           <LightBoxGallery title="Project gallery" data={data}/>
         </div>        

@@ -26,10 +26,10 @@ export default function RightClickRaid({data}) {
         </div>
         <div className={projectpageStyle.projectPageBody}>
           <p>          
-            Are you a twitch streamer and hate having to type out a channel's name or worst has a typo ever meant that you raided the wrong channel ?
+          Are you a twitch streamer and hate having to type out a channel's name, or even worse accidentally had a typo meaning that you raid the wrong channel? Right-Click-Raid has solved this problem.
           </p>
           <p>
-            Right-Click-Raid is a web extension that makes raiding easy, simply right click their profile, or a name or link in check add select raid form the dropdown menu.
+            Right-Click-Raid is a web extension that makes raiding easy. Simply right click on a someones profile, or a name or link from chat then select Raid form the dropdown menu.
           </p>
           <LightBoxGallery title="Project gallery" data={data}/>
         </div>

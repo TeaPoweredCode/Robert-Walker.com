@@ -20,15 +20,15 @@ export default function ProfilePostIt({data}) {
         </div>
         <div className={projectpageStyle.projectPageBody}>
           <p>
-          Ever wanted to keep track of how you know your obscure Facebook friends, 
-          who in your group owes you money or just use Facebook as a rolodex storing phone numbers, addresses and important dates.
+            Ever wanted to keep track of how you know your obscure Facebook friends,
+            who in your group owes you money or just use Facebook as your rolodex storing phone numbers, addresses and important dates? 
           </p>
           <p>          
-            Profile Post-it <s>is</s> was a web extension for the Chrome and Firefox browsers that adds a note element to Facebook profile
-            pages allowing you to keep your store information on a person or organisation.
+            Profile Post-it was a web extension for the Chrome and Firefox browsers that adds a note element to any Facebook profile page 
+            allowing you to add and store your information on a person or organisation.
           </p>
           <p>
-            Unfortunately Facebook claimed this extension breached their IP and issued a copyright request with google to have the extension removed for their store. 
+            Unfortunately Facebook claimed this extension breached their IP and issued a copyright request with google to have the extension removed from their store. 
           </p>
           <LightBoxGallery title="Project gallery" data={data}/>
         </div>

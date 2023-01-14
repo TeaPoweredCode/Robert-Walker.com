@@ -23,6 +23,13 @@
     grid-row-gap: 0px;
 }
 
+.contactDetails ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 .CodingExperience{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -54,6 +61,12 @@
 .employment{}
 .education{}
 
+
+@media screen and (max-width: 600px) {
+    .cv {
+        margin-left: 0px;
+    }
+  }
 
 @media print {
     .cv{

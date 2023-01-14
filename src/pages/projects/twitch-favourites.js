@@ -19,13 +19,13 @@ export default function TwitchFavourites({data}) {
       <StaticImage src= "../../projectData/twitch-favourites/TwitchFavourites-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
         <div className={projectpageStyle.projectPageBody}>
           <p>          
-            Finding your top streamers in the list of everyone you follow can be a pain on twitch,
-            especially when they're smaller channels that can be pushed down off the list and hidden behind the more button.
+            Finding your top streamers in the list of everyone you follow can be a pain on twitch, 
+            especially when they're a smaller channel that can be pushed down off the list and hidden behind the 'Show More' button. 
           </p>
           <p>
-            This web extension makes it much easier to find your favourite channels. 
-            Simply go to a channel and click the new favourite button to add them to the new favourite list.
-            The extension can be set to send desktop notification alerting you when a favourite streamer goes live.
+            This web extension makes it much easier to find your favourite channels.
+            Go to a channel and click the new favourite button to add them to a new customizable favourites list.
+            The extension also gives you the option to set desktop notifications alerting you when your favourite streamers go live so that you never miss them. 
           </p>
           <LightBoxGallery title="Project gallery" data={data}/>
         </div>

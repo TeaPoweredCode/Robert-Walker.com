@@ -19,12 +19,13 @@ export default function ChronoGGDesktop({data}) {
         <StaticImage src="../../projectData/chronogg-desktop/ChronoGGDesktop-banner.jpg" quality={90} breakpoints={[1720]} alt="project image" style={{height:"280px", margin:"20px 0"}}/>
         <div className={projectpageStyle.projectPageBody}>
           <p>          
-            Chrono.GG was a popular online video game store ran from 2015 to late 2020.
-            The site aimed to defy convention by instead of having a cluttered store with everything where individual games would easily get lost and never seen,
-            instead it would work with indie developers and influencers offer just one game day at a huge discount while marketing it though a huge number of youtubers and live streamers.
+            Chrono.GG was a popular online video game store that ran from 2015 to late 2020.
+            The site aimed to defy convention by instead of having a cluttered store where individual games get easily lost and never seen,
+            The team at Chrono.gg worked with indie developers and influencers to offer just one game day at a huge discount while 
+            simultaneously marketing it through a huge network of YouTubers and live streamers.
           </p>
           <p>
-            This light-weight desktop gadget spotlights the daily game so that you won't miss out on the great deals.
+            This lightweight desktop gadget spotlights the daily game so that you won't miss out on the great deals.
           </p>
           <LightBoxGallery title="Project gallery" data={data}/>
         </div>        
