@@ -74,7 +74,7 @@ export default function Cv() {
 
         <div className={[styles.cvSegment, styles.employment].join(' ')}>
           <h3>Employment</h3>
-          <EmploymentPlace place="GWD" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - Present" jobTitle="Software Engineer">
+          <EmploymentPlace place="GWD" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - January 2023" jobTitle="Software Engineer">
             <p>              
               GWD prides itself on helping socially-minded organisations and charities transition to digital systems.
               While here my primary role has been to work on the company's main two products: the "Donation Station" a contactless fundraising system; 
