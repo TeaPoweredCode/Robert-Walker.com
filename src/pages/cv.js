@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { SEO } from "../components/seo"
+import ExternalLink from "../components/ExternalLink"
+
 import * as styles from '../styles/cv.module.css'
 
 export default function Cv() {
@@ -30,8 +32,8 @@ export default function Cv() {
           <h1 >Robert Walker</h1>
           <div className={styles.contactDetails}>
             <ul>
-              <li>Robert-Walker.com</li>
-              <li>github.com/MrLuxan</li>
+              <li><ExternalLink link="https://www.robert-walker.com/" text="Robert-Walker.com" /></li>
+              <li><ExternalLink link="https://github.com/MrLuxan" text="github.com/MrLuxan"/></li>
             </ul>
             <ul>
               <li>Email: email@Robert-Walker.com</li>              
@@ -39,14 +41,14 @@ export default function Cv() {
             </ul>
           </div>
           <hr/>
-          Sheffield , UK based software engineer specialising in windows desktop applications and web development with experience with both front and back end technologies.          
+          Sheffield, UK based software engineer specialising in Windows desktop applications and web development with experience in both front and back end technologies.          
 	      </div>
 
         <div className={[styles.cvSegment, styles.experience].join(' ')}>
           <h3>Professional experience</h3>
           <div className={styles.CodingExperience}>
             <div>
-            Current Core Skills
+            Current Core Skills:
               <ul>
                 <li> C# </li>
                 <li> Node <ul></ul></li>
@@ -56,7 +58,7 @@ export default function Cv() {
               </ul>
             </div>
             <div>
-              Other Industry experience
+              Other Industry experience:
               <ul>
                 <li> VB</li>
                 <li> Java<ul><li>Android development</li></ul></li>
@@ -99,9 +101,9 @@ export default function Cv() {
               the performance of cash acceptors, rfid tag readers and barcode readers.
             </p>
             <p>
-              I also expanded the product range, developing new systems called "Experiential Giving" a companion product for the Donation Station.
-              Designed to help drive engagement and visibility, Experiential Giving couples a large video display with the Donation Station tablet.
-              As a user moves though the step of making a donation different pages trigger events on the large screen creating interactions and rewards.
+              I also expanded the product range, developing  the new "Experiential Giving" system, a companion product for the Donation Station.
+              Designed to help drive engagement and visibility. Experiential Giving couples a large video display with the Donation Station tablet.
+              As a user moves though the steps of making a donation, different pages trigger events on the large screen creating interactions and rewards.
               The system uses a node server and websockets to allow the tablet and device running the video display to communicate.
             </p>
           </EmploymentPlace>
@@ -137,8 +139,8 @@ export default function Cv() {
             </p> 
             <p>
               Apart from improving my design and development skills, I also learnt a significant amount about running a business learning from both our successes and our failures.
-              We became versed in; finding and managing clients, gathering specifications, managing expectations and the general clinet communitcation, 
-              skills I've been able to apply directly in my later career. I've also been able to share the business knowlage I gained with a number of friends 
+              We became versed in; finding and managing clients, gathering specifications, managing expectations and the general client communication. 
+              These are skills I've been able to apply directly in my later career. I've also been able to share the business  knowledge that I gained with a number of friends 
               who have gone onto set up their own businesses or go self-employed.
             </p>
           </EmploymentPlace>          
