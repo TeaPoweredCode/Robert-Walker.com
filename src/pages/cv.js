@@ -80,24 +80,24 @@ export default function Cv() {
           <EmploymentPlace place="reach." site="reachstudios.co.uk" siteUrl="https://reachstudios.co.uk/" time="June 2023 - January 2024" jobTitle="Senior Developer">
             <p>              
               Primarily employed as PHP Developer I worked on a number of projects using the Tall (Tailwind, Alpine.js, Laravel, and Livewire) stack.
-              Working closely with clients I helped both to build projects from their start, as well as sustaining ongoing development and maintenance of ones that were already deployed.
-              Where possible it also helped the developers working in the other disciplines that the company offered, such as moblie development aiding with flutter projects. 
+              Working closely with clients, I helped both to build projects from their start; as well as sustaining ongoing development and maintenance of projects that were already deployed.
+              Where possible I have also helped fellow developers working in the other disciplines that the company offered, such as moblie development aiding with flutter projects. 
             </p>
             <p>                            
-              Another part of my role as a Senior Developer was to help train and further educate the company's apprentices, helping them to develop their skills and as well their 
-              understanding of core programming concepts.
+              Another part of my role as a Senior Developer was to support, train and further educate the company's apprentices,
+              with focus on helping them to develop their skills and understanding of core programming concepts.
             </p>
           </EmploymentPlace>
 
           <EmploymentPlace place="GWD" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - January 2023" jobTitle="Software Engineer">
             <p>              
               GWD prides its self on helping socially-minded organisations and charities transition to digital systems.
-              While here my primary role has been to work on the company's main two products the "Donation Station" a contactless fundraising system 
-              and the "Discovery Station" a self-service library kiosk. Both applications are writen as react apps that then use NW.js to package them for Windows desktop.
+              While at this company my primary role was to work on the company's main two products the "Donation Station" a contactless fundraising system 
+              and the "Discovery Station" a self-service library kiosk. Both applications were writen as react apps that then use NW.js to package them for Windows desktop.
             </p>
             <p>                            
               The other aspect of GWD platform is the "Device Service", a C# application which runs as a web service that creates api endpoints that are used by the
-              Donation Station and Discovery Station to interact with different hardware. For this I've implemented new card payment systems, as well as improving
+              Donation Station and Discovery Station to interact with different hardware. For this I implemented a new card payment systems, as well as improving
               the performance of cash acceptors, rfid tag readers and barcode readers.
             </p>
             <p>
@@ -111,22 +111,22 @@ export default function Cv() {
           <EmploymentPlace place="Pryor Marking Technology" site="Pryormarking.com" siteUrl="http://www.pryormarking.com/" time="June 2013 - June 2021" jobTitle="Software Engineer">                              
             <p>
               During my time with Pryors I worked on a wide range of projects.
-              My main task was developing a windows desktop application "Traceable-IT", a complex marking and traceability package written in C# and VB.
+              My main task was to develop a Windows desktop application "Traceable-IT", a complex marking and traceability package written in C# and VB.
 			        I was responsible for the implementing of new core features, integrating new hardware such as ABB Robots , RFID readers and Cognex vision systems. 
-			        I also work closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke soltions.
+			        I also worked closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke soltions.
 			        For the last two years with the company I headed development of the next generation of traceability software for distribution in the Us.
             </p>
             {/*
              <p>
-              Secondly with my background in web development I've was tasked with developing of a range a web sites. These have included;
+              Secondly with my background in web development I was tasked with developing of a range a web sites. These have included;
               A ticketing and project management tool, sites for manage language translations and documentation for the desktop apps, 
-              web apis for tracking parts in manufacturing plants and the latest site I worked on was a software licence keys management.
+              web apis for tracking parts in manufacturing plants. The latest site I worked on was a software licence keys management.
             </p> 
             */}
             <p>
-              Due to my enthusiasm for exploring diffrent technologies I was often given any project that fell outside the standard skill set of the team. 
-			        This lead to me developing an number of Android application including a government contract to help prevent metal theft,
-              an RFID tag reading application that runs on windows pocket PCs for JLR and  
+              Due to my enthusiasm for exploring different technologies I was often given any project that fell outside the standard skill set of the team. 
+			        This led to me developing an number of Android application including a government contract to help prevent metal theft,
+              an RFID tag reading application that runs on Windows pocket PCs for JLR and  
               building a "Pick-To-Light" system using Arduinos and neo pixel LEDs to aid in the assembly of machines.
             </p>
           </EmploymentPlace>
