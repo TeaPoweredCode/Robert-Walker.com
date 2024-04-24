@@ -8,7 +8,7 @@
         "thumb": "./chronogg-desktop/ChronoGGDesktop-project.jpg",
         "stack" : ["C#", "WPF"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/ChronoGGDesktop"
+            "GitHub": "https://github.com/TeaPoweredCode/ChronoGGDesktop"
             }
     },
     {
@@ -20,7 +20,7 @@
         "thumb": "./simple-armory-toy-box/ToyBox-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/SimpleArmory-ToyBox"
+            "GitHub": "https://github.com/TeaPoweredCode/SimpleArmory-ToyBox"
         }
     },
     {
@@ -32,7 +32,7 @@
         "thumb": "./right-click-raid/RightClickRaid-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/Right-Click-Raid",
+            "GitHub": "https://github.com/TeaPoweredCode/Right-Click-Raid",
             "Chrome": "",
             "Firefox": ""
         }
@@ -46,7 +46,7 @@
         "thumb": "./twitch-favourites/TwitchFavourites-project.jpg",
         "stack" : ["TypeScript", "JS", "HTML", "CSS"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/TwitchFavourites"
+            "GitHub": "https://github.com/TeaPoweredCode/TwitchFavourites"
         }
     },
     {
@@ -58,7 +58,7 @@
         "thumb": "./profile-post-it/ProfilePostIt-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
-            "GitHub": "https://github.com/MrLuxan/ProfilePost-it"
+            "GitHub": "https://github.com/TeaPoweredCode/ProfilePost-it"
         }
     },
     {

@@ -15,7 +15,7 @@ export default function NavBar() {
       <Hexagon radius={30} stroke={3} link={"/cv"} title={"CV"}>
         <Icons.CV/>
       </Hexagon>
-      <Hexagon radius={30} stroke={3} link={"https://github.com/MrLuxan"} title={"Github"}>
+      <Hexagon radius={30} stroke={3} link={"https://github.com/TeaPoweredCode"} title={"Github"}>
         <Icons.GitHub/>
       </Hexagon>      
     </nav>

@@ -33,7 +33,7 @@ export default function Cv() {
           <div className={styles.contactDetails}>
             <ul>
               <li><ExternalLink link="https://www.robert-walker.com/" text="Robert-Walker.com" /></li>
-              <li><ExternalLink link="https://github.com/MrLuxan" text="github.com/MrLuxan"/></li>
+              <li><ExternalLink link="https://github.com/TeaPoweredCode" text="github.com/TeaPoweredCode"/></li>
             </ul>
             <ul>
               <li>Email: email@Robert-Walker.com</li>              
