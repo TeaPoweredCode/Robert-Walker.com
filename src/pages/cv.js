@@ -48,12 +48,12 @@ export default function Cv() {
           <h3>Professional experience</h3>
           <div className={styles.CodingExperience}>
             <div>
-            Current Core Skills:
+            Core Skills:
               <ul>
-                <li> C# </li>
-                <li> Node <ul></ul></li>
+                <li> C# (WPF and Winform)</li>                
                 <li> PHP <ul><li> Laravel and Livewire</li></ul></li>         
-                <li> Frontend Technologies <ul><li> HTML / CSS / SCSS / Tailwind</li><li> Javascript</li><li> React<br /><span style={{paddingLeft:"20px"}}> - Gatsby</span></li></ul></li>
+                <li> Node <ul></ul></li>
+                <li> Frontend Technologies <ul><li> HTML / CSS / Tailwind</li><li> Javascript</li><li> React<br /><span style={{paddingLeft:"20px"}}> - Gatsby</span></li></ul></li>
                 <li> Database Technologies <ul><li> MySQL / SQL </li></ul></li>
               </ul>
             </div>
@@ -81,7 +81,7 @@ export default function Cv() {
             <p>              
               Primarily employed as PHP Developer I worked on a number of projects using the Tall (Tailwind, Alpine.js, Laravel, and Livewire) stack.
               Working closely with clients, I helped both to build projects from their start; as well as sustaining ongoing development and maintenance of projects that were already deployed.
-              Where possible I have also helped fellow developers working in the other disciplines that the company offered, such as moblie development aiding with flutter projects. 
+              Where possible I have also helped fellow developers working in the other disciplines that the company offered, such as mobile development aiding with flutter projects. 
             </p>
             <p>                            
               Another part of my role as a Senior Developer was to support, train and further educate the company's apprentices,
@@ -93,7 +93,7 @@ export default function Cv() {
             <p>              
               GWD prides its self on helping socially-minded organisations and charities transition to digital systems.
               While at this company my primary role was to work on the company's main two products the "Donation Station" a contactless fundraising system 
-              and the "Discovery Station" a self-service library kiosk. Both applications were writen as react apps that then use NW.js to package them for Windows desktop.
+              and the "Discovery Station" a self-service library kiosk. Both applications were written as react apps that then use NW.js to package them for Windows desktop.
             </p>
             <p>                            
               The other aspect of GWD platform is the "Device Service", a C# application which runs as a web service that creates api endpoints that are used by the
@@ -113,7 +113,7 @@ export default function Cv() {
               During my time with Pryors I worked on a wide range of projects.
               My main task was to develop a Windows desktop application "Traceable-IT", a complex marking and traceability package written in C# and VB.
 			        I was responsible for the implementing of new core features, integrating new hardware such as ABB Robots , RFID readers and Cognex vision systems. 
-			        I also worked closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke soltions.
+			        I also worked closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke solitons.
 			        For the last two years with the company I headed development of the next generation of traceability software for distribution in the Us.
             </p>
             {/*
@@ -140,7 +140,7 @@ export default function Cv() {
             <p>
               Apart from improving my design and development skills, I also learnt a significant amount about running a business learning from both our successes and our failures.
               We became versed in; finding and managing clients, gathering specifications, managing expectations and the general client communication. 
-              These are skills I've been able to apply directly in my later career. I've also been able to share the business  knowledge that I gained with a number of friends 
+              These are skills I've been able to apply directly in my later career. I've also been able to share the business knowledge that I gained with a number of friends 
               who have gone onto set up their own businesses or go self-employed.
             </p>
           </EmploymentPlace>          
