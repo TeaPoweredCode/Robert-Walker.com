@@ -12,6 +12,11 @@
     margin: 10px 0;
 }
 
+.cv h4{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
 .cvPagebrake {
     page-break-after: always;
 }
@@ -63,7 +68,20 @@
 .cvSegment{}
 .experience{}
 .employment{}
+
+.employment ul {
+    margin: 15px 25px;
+}
+
+.employment li:not(:last-child) { 
+    margin-bottom: 5px;  
+ }
+
 .education{}
+
+.education span{
+    font-weight: bold;
+}
 
 
 @media screen and (max-width: 600px) {
