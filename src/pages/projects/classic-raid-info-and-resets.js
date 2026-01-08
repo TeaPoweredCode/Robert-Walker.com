@@ -12,7 +12,7 @@ import ExternalLink from "../../components/ExternalLink"
 
 import * as projectpageStyle from '../../styles/projectpage.module.css'
 
-export default function WTFIsOnSteam({data}) {
+export default function ClassicRaidInfoAndResets({data}) {
   return (
     <Layout>
       <ProjectPage slug={"classic-raid-info-and-resets"}>
@@ -34,7 +34,7 @@ export default function WTFIsOnSteam({data}) {
 }
 
 export const Head = () => (
-  <SEO title="Robert Walker • WTF Is On Steam"/>
+  <SEO title="Robert Walker • Classic Raid Info and Resets"/>
 )
 
 export const pageQuery = graphql`
