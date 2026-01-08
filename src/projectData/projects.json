@@ -1,6 +1,19 @@
 [
     {
         "id": 1,
+        "title": "Classic Raid Info And Resets",
+        "projectType": "WoW addon",
+        "slug": "classic-raid-info-and-resets",
+        "date": "2021-01-01T00:00:00+00:00",
+        "thumb": "./classic-raid-info-and-resets/ClassicRaidInfoAndResets-project.jpg",
+        "stack" : ["Lua"],
+        "projectLinks": {
+            "GitHub": "https://github.com/TeaPoweredCode/ClassicRaidInfoAndResets",
+            "CurseForge": "https://www.curseforge.com/wow/addons/classic-raid-info-and-resets"
+            }
+    },
+    {
+        "id": 2,
         "title": "ChronoGG Desktop",
         "projectType": "Desktop application",
         "slug": "chronogg-desktop",
@@ -12,7 +25,7 @@
             }
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Simple Armory - Toy Box",
         "projectType": "Chrome extension",
         "slug": "simple-armory-toy-box",
@@ -24,7 +37,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Right click raid",
         "projectType": "Web extension",
         "slug": "right-click-raid",
@@ -38,7 +51,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Twitch Favourites",
         "projectType": "Web extension",
         "slug": "twitch-favourites",
@@ -50,7 +63,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Profile Post-it",
         "projectType": "Web extension",
         "slug": "profile-post-it",
@@ -62,7 +75,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 7,
         "title": "WTF Is On Steam",
         "projectType": "Chrome extension",
         "slug": "wtf-is-on-steam",

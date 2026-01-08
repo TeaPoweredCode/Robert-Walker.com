@@ -10,6 +10,7 @@ export default function ProjectLinkList({links}) {
         {!!links.GitHub > 0 && <ProjectLink icon="github" link={links.GitHub}/> }
         {!!links.Chrome > 0 && <ProjectLink icon="chrome" link={links.Chrome}/> }
         {!!links.Firefox > 0 && <ProjectLink icon="firefox" link={links.Firefox}/> }
+        {!!links.CurseForge > 0 && <ProjectLink icon="curseforge" link={links.CurseForge}/> }
     </span>
   )
 }

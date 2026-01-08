@@ -41,7 +41,7 @@ export default function Cv() {
             </ul>
           </div>
           <hr/>
-          Sheffield UK based Software Engineer specialising in Windows desktop applications and web development, with over 10 year industry experience.
+          Sheffield UK based Software Engineer specialising in Windows desktop applications and web development, with over 10 years industry experience.
 	      </div>
 
         <div className={[styles.cvSegment, styles.experience].join(' ')}>
@@ -61,7 +61,7 @@ export default function Cv() {
               Other Industry experience:
               <ul>
                 <li> VB</li>
-                <li> Moblie development<ul><li>Android development (Java)</li><li>Flutter</li></ul></li>
+                <li> Mobile development<ul><li>Android development (Java)</li><li>Flutter</li></ul></li>
                 <li> Python <ul><li>Django</li></ul></li>
                 <li> Arduino</li>                
                 <li> Hardware integration</li>

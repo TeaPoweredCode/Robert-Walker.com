@@ -38,6 +38,7 @@ query projects {
           GitHub
           Chrome
           Firefox
+          CurseForge
         }
         thumb {
           childImageSharp {
