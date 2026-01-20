@@ -49,12 +49,12 @@ export default function Cv() {
           <div className={styles.CodingExperience}>
             <div>
             Core Skills:
-              <ul>
-                <li> C# (WPF and Winform)</li>                
+              <ul>              
                 <li> PHP <ul><li> Laravel and Livewire</li></ul></li>         
                 <li> Node <ul></ul></li>
                 <li> Frontend Technologies <ul><li> HTML / CSS / Tailwind</li><li> Javascript</li><li> React<br /></li></ul></li>
-                <li> Database Technologies <ul><li> MySQL / SQL </li></ul></li>
+                <li> Database Technologies <ul><li> MySQL / SQL / SQLite </li><li> Redis </li></ul></li>
+                <li> C# (WPF and Winform)</li>  
               </ul>
             </div>
             <div>
@@ -77,9 +77,10 @@ export default function Cv() {
             <ul>
               {
                 [
-                  `Developed and maintained multiple web applications using the Tall Stack (Tailwind CSS, Alpine.js, Laravel, and Livewire),
-                  collaborating with clients to create new projects and provide ongoing support for existing ones.`,
-                  "Worked across teams to contribute with company's other disciplines such as React, Flutter mobile and design.",
+                  "Developed and maintained multiple web applications using the Tall Stack (Tailwind CSS, Alpine.js, Laravel, and Livewire).",
+                  "Worked as a full stack developer; Implementing frontends by following provided figma designs and independently, building complex backends and designing database.",
+                  "Collaborating with clients to help spec and create new projects aswell as provide ongoing support for existing ones.",
+                  "Worked across teams to collaborate and aid with company's other disciplines such as React, mobile (Flutter , Objective-C) and design.",
                   "Mentored and trained apprentices, enhancing their programming skills and understanding of core software development concepts.",
                 ].map((task) => (<li>{task}</li>))
               }
@@ -94,7 +95,7 @@ export default function Cv() {
                 "Developed C# web service APIs for hardware interactions (card payment devices, RFID reads, barcode readers).",
                 "Developed C# desktop applications to for hardware testing and device setup.",
                 `Worked to expand the product base developing "Experiential Giving", 
-                 a companion system to work along sided the Donation Station designed to help drive engagement and visibility.`,
+                 a companion system to work along side the Donation Station designed to help drive engagement and visibility.`,
               ].map((task) => (<li>{task}</li>))
             }
           </ul>
