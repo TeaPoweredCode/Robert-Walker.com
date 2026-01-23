@@ -11,11 +11,11 @@ export default function IntroCard(props) {
   <div className={[styles.gridItem, styles.projectItem , introcardStyles.introCard].join(" ")}>
 
     <div className={introcardStyles.hero}>
-      <img src={'/introcard.jpg'} alt="Me photo"/>
+      <img src={'/introcard.webp'} alt="Me photo"/>
       <div>
         Ay up 👋 I'm a UK based software engineer. <br/>
         I drink a silly amount of tea and write code.
-        This is just a simple portforlio site of some of the stuff I've made.
+        This is just a simple portfolio site of some of the things I've made.
       </div>
     </div>
 
