@@ -1,0 +1,31 @@
+import React from 'react'
+import { Link } from 'gatsby';
+
+import * as styles from '../styles/projectitem.module.css'
+import * as introcardStyles from '../styles/introcard.module.css'
+
+export default function IntroCard(props) {
+  const project = props.project;
+
+  return (
+  <div className={[styles.gridItem, styles.projectItem , introcardStyles.introCard].join(" ")}>
+
+    <div className={introcardStyles.hero}>
+      <img src={'/introcard.jpg'} alt="Me photo"/>
+      <div>
+        Ay up 👋 I'm a UK based software engineer. <br/>
+        I drink a silly amount of tea and write code.
+        This is just a simple portforlio site of some of the stuff I've made.
+      </div>
+    </div>
+
+    <div>
+      <h1>Robert Walker</h1>
+      <h2>Dev - [ Full stack web , Desktop , Moblie ]</h2>
+    </div>
+
+  </div>
+  )
+}
+
+
