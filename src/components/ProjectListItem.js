@@ -16,8 +16,8 @@ export default function ProjectListItem(props) {
       <GatsbyImage image={ project.thumb.childImageSharp.gatsbyImageData } alt="project image"/>
     </Link>
     <Link to={'/projects/' + project.slug} className={styles.projectTitleLink}>   
-      <h1>{project.title}</h1>
-      <h2>{project.projectType}</h2>
+      <h2>{project.title}</h2>
+      <h3>{project.projectType}</h3>
     </Link>
     <div className={styles.projectLinks}>
       <ProjectLinkList links={projectLinks}/>
