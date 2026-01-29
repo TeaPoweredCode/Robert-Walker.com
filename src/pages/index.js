@@ -13,7 +13,7 @@ export default function Home({ data }) {
     <Layout>
       <div className="grid-container">
         <IntroCard/>
-        {projects.map(data => <ProjectListItem project={data.node} key={data.node.id}/>)}
+        {projects.map((data, index) => <ProjectListItem project={data.node} key={index}/>)}
         {[...Array(4)].map((e, i) => <ProjectListPlaceHolder key={i}/>)}
       </div>
     </Layout>
@@ -24,14 +24,11 @@ export const Head = () => (
   <SEO />
 )
 
-
 export const query = graphql`
 query projects {
   allProjectsJson {
     edges {
       node {
-        id
-        date
         title
         stack
         slug

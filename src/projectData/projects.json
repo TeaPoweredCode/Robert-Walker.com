@@ -1,10 +1,8 @@
 [
     {
-        "id": 1,
         "title": "Classic Raid Info And Resets",
         "projectType": "WoW addon",
         "slug": "classic-raid-info-and-resets",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./classic-raid-info-and-resets/ClassicRaidInfoAndResets-project.jpg",
         "stack" : ["Lua"],
         "projectLinks": {
@@ -13,11 +11,19 @@
             }
     },
     {
-        "id": 2,
+        "title": "The Cult Of Creativity - Twitch panel",
+        "projectType": "Twitch extension",
+        "slug": "the-cult-of-creativity-twitch-panel",
+        "thumb": "./the-cult-of-creativity-twitch-panel/TheCultOfCreativity-project.jpg",
+        "stack" : ["JS", "HTML", "Tailwind"],
+        "projectLinks": {
+            "GitHub": "https://github.com/TeaPoweredCode/TheCultOfCreativity-TwitchPanel"
+            }
+    },
+    {
         "title": "ChronoGG Desktop",
         "projectType": "Desktop application",
         "slug": "chronogg-desktop",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./chronogg-desktop/ChronoGGDesktop-project.jpg",
         "stack" : ["C#", "WPF"],
         "projectLinks": {
@@ -25,11 +31,9 @@
             }
     },
     {
-        "id": 3,
         "title": "Simple Armory - Toy Box",
         "projectType": "Chrome extension",
         "slug": "simple-armory-toy-box",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./simple-armory-toy-box/ToyBox-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
@@ -37,11 +41,9 @@
         }
     },
     {
-        "id": 4,
         "title": "Right click raid",
         "projectType": "Web extension",
         "slug": "right-click-raid",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./right-click-raid/RightClickRaid-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
@@ -51,11 +53,9 @@
         }
     },
     {
-        "id": 5,
         "title": "Twitch Favourites",
         "projectType": "Web extension",
         "slug": "twitch-favourites",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./twitch-favourites/TwitchFavourites-project.jpg",
         "stack" : ["TypeScript", "JS", "HTML", "CSS"],
         "projectLinks": {
@@ -63,11 +63,9 @@
         }
     },
     {
-        "id": 6,
         "title": "Profile Post-it",
         "projectType": "Web extension",
         "slug": "profile-post-it",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./profile-post-it/ProfilePostIt-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {
@@ -75,11 +73,9 @@
         }
     },
     {
-        "id": 7,
         "title": "WTF Is On Steam",
         "projectType": "Chrome extension",
         "slug": "wtf-is-on-steam",
-        "date": "2021-01-01T00:00:00+00:00",
         "thumb": "./wtf-is-on-steam/WTFIsOnSteam-project.jpg",
         "stack" : ["JS", "HTML", "CSS"],
         "projectLinks": {}

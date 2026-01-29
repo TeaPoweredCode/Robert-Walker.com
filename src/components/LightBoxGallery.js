@@ -27,7 +27,7 @@ export default function LightBoxGallery(props) {
 
   return (
     <div className={styles.lightBoxGallery}>
-      {title != null && <h1> - {title} - </h1>}
+      {title != null && <h2> - {title} - </h2>}
       <div className={styles.lightBoxGalleryImages}>
         {data.gallery.edges.map(({node},index) =>          
           <span key={node.id} onClick={() => openLightboxOnSlide(index+1)}>
