@@ -73,12 +73,12 @@ export default function Cv() {
         <div className={[styles.cvSegment, styles.employment].join(' ')}>
           <h3>Employment</h3>
 
-          <EmploymentPlace jobTitle="Senior PHP / Laravel Developer" place="reach." site="reachstudios.co.uk" siteUrl="https://reachstudios.co.uk/" time="June 2023 - January 2024">            
+          <EmploymentPlace jobTitle="Senior PHP / Laravel Developer" place="reach." site="reachstudios.co.uk" siteUrl="https://reachstudios.co.uk/" time="April 2023 - January 2024">            
             <ul>
               {
                 [
                   "Developed and maintained multiple web applications using the Tall Stack (Tailwind CSS, Alpine.js, Laravel, and Livewire).",
-                  "Worked as a full stack developer; Implementing frontends by following provided figma designs and independently, building complex backends and designing database.",
+                  "Worked as a full stack developer; Implementing frontends by following provided figma designs and independently, building complex backends and designing databases.",
                   "Collaborating with clients to help spec and create new projects aswell as provide ongoing support for existing ones.",
                   "Worked across teams to collaborate and aid with company's other disciplines such as React, mobile (Flutter , Objective-C) and design.",
                   "Mentored and trained apprentices, enhancing their programming skills and understanding of core software development concepts.",

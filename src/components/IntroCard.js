@@ -1,12 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby';
 
 import * as styles from '../styles/projectitem.module.css'
 import * as introcardStyles from '../styles/introcard.module.css'
 
-export default function IntroCard(props) {
-  const project = props.project;
-
+export default function IntroCard() {
   return (
   <div className={[styles.gridItem, styles.projectItem , introcardStyles.introCard].join(" ")}>
 
