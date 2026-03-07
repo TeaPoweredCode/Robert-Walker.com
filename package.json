@@ -1,34 +1,15 @@
 {
-  "name": "robert-walker.com",
-  "private": true,
-  "description": "A portfolio site",
-  "version": "0.1.0",
-  "license": "0BSD",
+  "name": "robert-walker",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "fslightbox-react": "^1.7.6",
-    "gatsby": "^5.14.0",
-    "gatsby-plugin-image": "^3.14.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-transformer-json": "^5.14.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "prettier": "^3.4.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MrLuxan/Robert-Walker.com"
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.17.1"
   }
 }

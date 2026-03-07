@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import ProjectLinks from './ProjectLinks.astro'
+const project = Astro.props.project;
+---
+<style>
+	.projectGridItem{
+		background-color: #fff;
+		padding: 10px;
+		box-shadow: 2px 2px 6px #888888;
+		border-radius: 4px;
+
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 10px;
+	}
+
+	.ProjectImageLink {
+		 grid-area: 1 / 1 / 2 / 3;
+	}
+	.ProjectImageLink:hover ~ .projectTitleLink {
+		color: #191919;
+		text-decoration: underline;
+	}
+
+	.gridImage{
+		width: 100%;
+		height: auto;
+	}
+
+	.projectTitleLink { 
+		grid-area: 2 / 1 / 3 / 2; 
+		width: -moz-fit-content;
+		width: fit-content;
+		text-decoration: none;
+	}
+
+	.projectTitleLink:link {
+		color: #191919;
+	}
+	.projectTitleLink:visited {
+		color: #191919;
+	}
+
+	.projectTitleLink:hover {
+		color: #191919;
+		text-decoration: underline;
+	}
+
+	.projectTitleLink:active {
+		color: #191919;
+	}
+
+	.projectTitleLink * {
+		margin: 0;
+		padding: 0;
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+
+	.projectTitleLink h2{
+		font-size: 15px;
+	}
+
+	.projectTitleLink h3{
+		font-size: 12px;
+	}
+
+	.projectLinks { 
+		grid-area: 2 / 2 / 3 / 3;
+	}
+</style>
+<div class="projectGridItem">
+	<a class="ProjectImageLink" href={`/projects/${project.id}`}>
+		<Image class="gridImage" src={project.data.images.grid} alt={`${project.data.title} project`} />
+	</a>
+	<a class="projectTitleLink" href={`/projects/${project.id}`}>
+		<h2>{project.data.title}</h2>
+		<h3>{project.data.projectType}</h3>
+	</a>
+	<ProjectLinks links={project.data.links}/>
+</div>
