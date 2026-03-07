@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import HeaderBar from '../components/HeaderBar.astro';
+
+const { pageTitle } = Astro.props;
+---
+<style>
+	main {
+		position: relative;
+		margin: auto auto auto 180px;
+		padding: 10px;
+	}	
+
+@media screen and (max-width: 600px) {
+	main {
+		margin: 110px auto auto auto;
+		padding: 10px;
+	}
+}
+
+@media print {
+	main {
+		margin: 10px;
+		padding: 0;
+	}
+}
+</style>
+
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<div class="flex">
+			<HeaderBar />
+			<main>
+				<slot />
+			</main>
+		</div>
+	</body>
+</html>

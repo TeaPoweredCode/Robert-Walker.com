@@ -1,0 +1,150 @@
+---
+import HeaderBarAvatar from '../components/HeaderBarAvatar.astro';
+import HeaderBarInfo from '../components/HeaderBarInfo.astro';
+import HeaderBarIcon from './HeaderBarIcon.astro';
+
+const ePages = Object.freeze({
+	Projects:"Projects",
+	Cv:  "Cv",
+});
+
+const currentPage = Astro.url.pathname == "/cv" ? ePages.Cv : ePages.Projects; // Projects for index and /Projects 
+---
+<style>
+	.headerBar {
+		position: fixed;
+		inset: 0 auto auto 0;
+		background: linear-gradient(0deg, #191d30, #1b1f32 10%, #1e2335 20%, #212839 30%, #242d3d 40%, #25323f 50%, #24353f 60%, #22333b 70%, #1e2d32 80%, #192428 90%, #131a20);
+		height: 100%;			  
+		width: 180px;
+		z-index: 1;
+		color: #eaeaea;
+		font-weight: 500;
+
+		padding: 10px;
+	}
+
+	.title {
+		margin: 10px 0px;
+	}
+	.title * {
+		margin: 0;
+		padding: 0;
+	}
+	.title h2{
+		font-size: 1.4rem;
+	}
+	.title h3{
+		font-size: 1rem;
+	}
+	
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;	
+	}
+
+	hr{
+		width: 50px;
+	}
+
+	.moblieNav {
+		display: none;
+	}
+
+	.headerText {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.currentPage{
+		background-color: #f0f8ff26;
+		border-radius: 5px;
+		padding: 5px 15px 5px 5px;
+	}
+
+@media screen and (max-width: 600px) {
+	.headerBar {
+		width: 100%;  
+		padding: 5px;
+		height: auto;
+		background: linear-gradient(90deg, rgba(25,29,48,1) 0%, rgba(27,31,50,1) 10%, rgba(30,35,53,1) 20%, rgba(33,40,57,1) 30%, rgba(36,45,61,1) 40%, rgba(37,50,63,1) 50%, rgba(36,53,63,1) 60%, rgba(34,51,59,1) 70%, rgba(30,45,50,1) 80%, rgba(25,36,40,1) 90%, rgba(19,26,32,1) 100%);
+		text-align: left;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.title {
+		margin: 0 0 0 5px;
+	}
+
+	hr{
+		display: none;
+	}
+
+	.moblieNav {
+		margin: 0 0 0 5px;
+		flex: 1;
+		align-items: center;
+
+		display: flex;
+		flex-direction: row;
+		gap: 15px;
+	}
+
+	.moblieNav a {
+		color: #eaeaea;
+		text-decoration: none;
+	}
+}
+
+@media print {
+	.headerBar{
+	display: none;
+	}
+}
+</style>
+
+<div class="headerBar">
+	<HeaderBarAvatar />
+	<div class="headerText">
+		<div class="title">
+			<h2>Robert Walker</h2>
+			<h3>Software Engineer</h3>
+		</div>
+		<HeaderBarInfo icon="codeLaptop">
+			<ul>
+				<li> Full stack web </li>
+				<li> Desktop </li>
+				<li> Moblie </li>	   
+			</ul>
+		</HeaderBarInfo>
+		<nav>
+			<HeaderBarInfo icon="locationDot" link="https://www.google.com/maps/place/Sheffield">			
+				Sheffield , UK
+			</HeaderBarInfo>
+			<HeaderBarInfo icon="github" link="https://github.com/TeaPoweredCode">
+				TeaPoweredCode
+			</HeaderBarInfo>
+			<hr>
+			<HeaderBarInfo icon="projects" link="/projects" class={currentPage == ePages.Projects ? "currentPage" : undefined }>
+				Projects
+			</HeaderBarInfo>
+			<HeaderBarInfo icon="cv" link="/cv" class={currentPage == ePages.Cv ? "currentPage" : undefined }>
+				Cv
+			</HeaderBarInfo>
+
+			<div class="moblieNav">
+				<a href="/projects" class={currentPage == ePages.Projects ? "currentPage" : undefined }>
+					<HeaderBarIcon icon="projects" /> Projects
+				</a>
+				<a href="/cv" class={currentPage == ePages.Cv ? "currentPage" : undefined }>
+					<HeaderBarIcon icon="cv" /> Cv
+				</a>
+				|<a href="https://github.com/TeaPoweredCode" target="_blank"  rel="noopener noreferrer">
+					<HeaderBarIcon icon="github" /> Github
+				</a>
+			</div>
+		</nav>
+	</div>
+</div>

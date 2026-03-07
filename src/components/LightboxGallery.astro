@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+
+const { images } = Astro.props;
+---
+<style>
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1rem;
+	}
+
+	.gallery-item {
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		background: none;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+
+	.lightbox {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.85);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.25s ease;
+		z-index: 1000;
+	}
+
+	.lightbox.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.lightbox-image {
+		max-width: 90%;
+		max-height: 80%;
+		border-radius: 8px;
+	}
+
+	.lightbox button {
+		position: absolute;
+		background: none;
+		border: none;
+		color: white;
+		font-size: 2rem;
+		cursor: pointer;
+		padding: 1rem;
+	}
+
+	.lightbox-close {
+		top: 1rem;
+		right: 1rem;
+	}
+
+	.lightbox-prev {
+		left: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.lightbox-next {
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+</style>
+
+
+<div class="gallery">
+	{images.map((image, index) => (
+		<button class="gallery-item" data-index={index} data-full={image.src} aria-label={`Open image ${index + 1}`}>
+			<Image src={image} alt="" width={400} loading="lazy" format="webp"/>
+		</button>
+	))}
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+	<button class="lightbox-close" aria-label="Close">&times;</button>
+	<button class="lightbox-prev" aria-label="Previous">&#10094;</button>
+	<img class="lightbox-image" src="" alt="" />
+	<button class="lightbox-next" aria-label="Next">&#10095;</button>
+</div>
+
+
+<script>
+	const galleryItems = document.querySelectorAll(".gallery-item");
+	const lightbox = document.getElementById("lightbox");
+	const lightboxImage = lightbox.querySelector(".lightbox-image");
+	const btnClose = lightbox.querySelector(".lightbox-close");
+	const btnPrev = lightbox.querySelector(".lightbox-prev");
+	const btnNext = lightbox.querySelector(".lightbox-next");
+
+	let currentIndex = 0;
+
+	const images = Array.from(galleryItems).map((item) => ({
+		src: item.dataset.full
+	}));
+
+	function showImage(index) {
+		currentIndex = index;
+		lightboxImage.src = images[index].src;
+		lightbox.classList.add("active");
+		lightbox.setAttribute("aria-hidden", "false");
+	}
+
+	function closeLightbox() {
+		lightbox.classList.remove("active");
+		lightbox.setAttribute("aria-hidden", "true");
+	}
+
+	function showNext() {
+		showImage((currentIndex + 1) % images.length);
+	}
+
+	function showPrev() {
+		showImage((currentIndex - 1 + images.length) % images.length);
+	}
+
+	galleryItems.forEach((item, index) => {
+		item.addEventListener("click", () => showImage(index));
+	});
+
+	btnClose.addEventListener("click", closeLightbox);
+	btnNext.addEventListener("click", showNext);
+	btnPrev.addEventListener("click", showPrev);
+
+	document.addEventListener("keydown", (e) => {
+		if (!lightbox.classList.contains("active")) return;
+		if (e.key === "Escape") closeLightbox();
+		if (e.key === "ArrowRight") showNext();
+		if (e.key === "ArrowLeft") showPrev();
+	});
+
+	lightbox.addEventListener("click", (e) => {
+		if (e.target === lightbox) closeLightbox();
+	});
+</script>

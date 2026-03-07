@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import ProjectGridItem from "./ProjectGridItem.astro"
+
+
+const order = [
+	"classic-raid-info-and-resets",
+	"the-cult-of-creativity-twitch-panel",
+	"chronogg-desktop",
+	"profile-post-it",
+	"simple-armory-toy-box",
+	"right-click-raid",
+	"twitch-favourites",
+	"wtf-is-on-steam",
+];
+
+const sortedProjects = (await getCollection("projects")).sort((a, b) => {
+	const aIndex = order.indexOf(a.id);
+	const bIndex = order.indexOf(b.id);
+	return aIndex - bIndex;
+});
+---
+<style>
+	.projectsGrid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 10px;
+		
+	}
+</style>
+
+<div class="projectsGrid">
+	{sortedProjects.map((project: any) => <ProjectGridItem project={project} />)}
+</div>

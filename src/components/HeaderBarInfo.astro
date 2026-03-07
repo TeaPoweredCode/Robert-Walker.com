@@ -1,0 +1,42 @@
+---
+import HeaderBarIcon from "./HeaderBarIcon.astro";
+
+const { icon , link , class: className } = Astro.props;
+const isExternal = /^https?:\/\//.test(link);
+---
+<style>
+	div{
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		margin-bottom: 10px;
+		vertical-align: middle;
+	}
+	a {
+		color: #eaeaea;
+		text-decoration: none;
+	}
+	.currentPage{
+		background-color: #f0f8ff26;
+		border-radius: 5px;
+		padding: 5px 15px 5px 5px;
+	}
+
+@media screen and (max-width: 600px) {
+	div{
+		display: none;
+	}
+}
+</style>
+
+<div>
+	{link ? 
+		<a href={link} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} class={className}>
+			<HeaderBarIcon icon={icon} />
+			<slot />
+		</a>
+		:
+		<HeaderBarIcon icon={icon} />
+		<slot />
+	}
+</div>

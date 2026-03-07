@@ -1,0 +1,6 @@
+---
+const { link, text, title, class: className } = Astro.props;
+---
+<a class={className} href={link} title={title} target="_blank" rel="noopener noreferrer">
+	{Astro.slots.has('default') ? (<slot/>) : (text)}
+</a>

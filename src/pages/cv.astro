@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmploymentPlace from '../components/CvEmploymentPlace.astro';
+
+const pageTitle = "Robert Walker • CV";
+---
+<style>
+	.cv{
+		max-width: 900px;
+		padding: 0px 50px 50px 50px;
+		line-height: 1.1;
+	}
+	.cv * {
+		margin: 0;
+		padding: 0;
+	}
+	.cv hr{
+		margin: 7.5px 0;
+	}
+	.cv h1{
+		font-size: 2rem;
+	}
+	.cv h3{
+		margin: 10px 0;
+	}
+	.cv h4{
+		font-size: 1.1rem;
+		margin: 0;
+	}
+
+	.contactDetails{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-auto-flow: column;
+	}
+	.contactDetails ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.contactDetails a{
+		color: black;
+		text-decoration: none;
+	}
+
+	.CodingExperience{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+	.CodingExperience ul
+	{
+		padding-left: 20px;
+		margin: 5px 0; 
+	}
+	.CodingExperience ul ul
+	{ 
+		list-style: none;
+		margin: 0;
+		padding-left: 10px;
+	}
+	.CodingExperience ul ul li:before 
+	{
+		content: "+";
+		margin-right: 4px;
+	}
+
+	.employment ul {
+		margin: 15px 25px;
+	}
+	.employment li:not(:last-child) { 
+		margin-bottom: 5px;	
+	}
+
+	.education span{
+		font-weight: bold;
+	}
+	
+@media screen and (max-width: 600px) {
+	.cv {
+		padding: 0 0 20px 0;
+
+	}
+}
+
+@media print {
+	.cv {
+		max-width: 900px;
+		margin: 10px;
+		padding: 0;
+	}
+}
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+	<div class="cv">
+		<div class="header">
+			<h1 >Robert Walker</h1>
+			<div class="contactDetails">
+				<div>Robert-Walker.com</div>
+				<div>github.com/TeaPoweredCode</div>
+				<div>Email: email@Robert-Walker.com</div>
+				<div></div>
+			</div>
+			<hr/>
+			Sheffield UK based Software Engineer specialising in Windows desktop applications and web development, with over 10 years industry experience.
+		</div>
+
+		<div class="experience">
+			<h3>Professional experience</h3>
+			<div class="CodingExperience">
+			<div>
+			Core Skills:
+				<ul>
+					<li> PHP <ul><li> Laravel and Livewire</li></ul></li>
+					<li> C# <ul><li> WPF / Winform</li></ul></li>
+					<li> Node</li>
+					<li> Frontend Technologies <ul><li>HTML / CSS / Tailwind</li><li>Javascript</li><li>React</li></ul></li>
+					<li> Database Technologies <ul><li>MySQL / SQL / SQLite</li><li>PostgreSQL</li> <li>Redis </li></ul></li>
+				</ul>
+			</div>
+			<div>
+				Other Industry experience:
+				<ul>
+					<li> VB</li>
+					<li> Mobile development<ul><li>Android development (Java)</li><li>Flutter</li></ul></li>
+					<li> Python <ul><li>Django</li></ul></li>
+					<li> Arduino</li>				
+					<li> Hardware integration</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+
+		<div class="employment">
+			<h3>Employment</h3>
+			<EmploymentPlace jobTitle="Senior PHP / Laravel Developer" place="reach." site="reachstudios.co.uk" siteUrl="https://reachstudios.co.uk/" time="April 2023 - January 2024">			
+			<ul>
+				{
+					["Developed and maintained multiple web applications using the Tall Stack (Tailwind CSS, Alpine.js, Laravel, and Livewire).",
+					"Worked as a full stack developer; Implementing frontends by following provided figma designs and independently, building complex backends and designing databases.",
+					"Collaborating with clients to help spec and create new projects aswell as provide ongoing support for existing ones.",
+					"Worked across teams to collaborate and aid with company's other disciplines such as React, mobile (Flutter , Objective-C) and design.",
+					"Mentored and trained apprentices, enhancing their programming skills and understanding of core software development concepts.",
+					].map((task) => (<li>{task}</li>))
+				}
+			</ul>
+			</EmploymentPlace>
+
+			<EmploymentPlace jobTitle="Software Engineer" place="GWD" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - January 2023" >
+			<ul>
+			{
+				[`Contributed to the development of "Donation Station" and "Discovery Station" products.
+				 Applications written in React and packaged as Windows desktop app using NW.js.`,
+				"Developed C# web service APIs for hardware interactions (card payment devices, RFID reads, barcode readers).",
+				"Developed C# desktop applications to for hardware testing and device setup.",
+				`Worked to expand the product base developing "Experiential Giving", 
+				 a companion system to work along side the Donation Station designed to help drive engagement and visibility.`,
+				].map((task) => (<li>{task}</li>))
+			}
+			</ul>
+			</EmploymentPlace>
+			
+			<div class="pagebrake"></div>
+
+			<EmploymentPlace jobTitle="Software Engineer" place="Pryor Marking Technology" site="Pryormarking.com" siteUrl="http://www.pryormarking.com/" time="June 2013 - June 2021">								
+			<ul>
+			{
+				["Developed complex Windows desktop applications written in C# and VB.",
+				"Integrated hardware such as ABB Robots, RFID readers and Cognex vision systems.",
+				"Worked closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke solutions.",
+				"Built a range of web based tools with php and Laravel for managing software licenses, bespoke ticketing system and documentation system.",
+				"Made mobile applications on Android for tracking parts though production lines."
+				].map((task) => (<li>{task}</li>))
+			}
+			</ul>
+			</EmploymentPlace>
+
+			<EmploymentPlace jobTitle="Managing Director" place="IOAIS" time="June 2011 - September 2012">
+			<ul>
+			{
+				["Co-founded a web design and software development company as part of a university enterprise scheme during my placement year.",
+				"Worked as the company's technical lead gathering project specifications and developing a number of web applications for small businesses.",
+				"Aided with client acquisition, client communications, project management, and business management.",
+				"Became a knowledge base for a number of friends who set up their own businesses or work self-employed."
+				].map((task) => (<li>{task}</li>))
+			}
+			</ul>
+			</EmploymentPlace>
+		</div>
+
+		<div class="education">
+			<h3>Education</h3>
+			<span>BSc (Hons) Software Engineering</span><br/> - Sheffield Hallam University<br/>
+			<span>BTEC in Software Development</span><br/> - Peterborough Regional College
+		</div>
+	</div>
+</BaseLayout>

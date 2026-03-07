@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import meImage from '../images/me.jpg';
+import Logo from './Logo.astro';
+
+---
+<style>
+	.avatar{
+		display: grid;
+		place-items: end;
+		margin: 0 auto;
+		width: 150px;
+	}
+	img{
+		padding: 5px;
+		border: 2px solid #51555d;	   
+		border-radius: 50%;
+
+		width: 100%;
+		height: auto;
+	}
+	.avatar > * {
+		grid-area: 1/1;
+	}
+
+@media screen and (max-width: 600px) {
+	.avatar{
+		margin: 0;
+		width: 100px;
+	}
+}	
+</style>
+
+<div class="avatar">
+	<Image src={meImage} alt="Avatar" loading="eager"/>
+	<div>
+		<Logo radius={20} stroke={2} scale={0.45} />   
+	</div>
+</div>
