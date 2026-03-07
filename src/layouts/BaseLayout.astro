@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import HeaderBar from '../components/HeaderBar.astro';
 
-const { pageTitle } = Astro.props;
+const {page, pageTitle } = Astro.props;
 ---
 <style>
 	main {
@@ -36,7 +36,7 @@ const { pageTitle } = Astro.props;
 	</head>
 	<body>
 		<div class="flex">
-			<HeaderBar />
+			<HeaderBar page={page} />
 			<main>
 				<slot />
 			</main>

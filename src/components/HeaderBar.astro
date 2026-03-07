@@ -7,8 +7,9 @@ const ePages = Object.freeze({
 	Projects:"Projects",
 	Cv:  "Cv",
 });
-
-const currentPage = Astro.url.pathname == "/cv" ? ePages.Cv : ePages.Projects; // Projects for index and /Projects 
+ 
+const {page } = Astro.props;
+const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 ---
 <style>
 	.headerBar {
