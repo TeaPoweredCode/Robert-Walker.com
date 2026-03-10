@@ -3,6 +3,8 @@ import HeaderBarAvatar from '../components/HeaderBarAvatar.astro';
 import HeaderBarInfo from '../components/HeaderBarInfo.astro';
 import HeaderBarIcon from './HeaderBarIcon.astro';
 
+import DarkModeToggle from './DarkModeToggle.astro';
+
 const ePages = Object.freeze({
 	Projects:"Projects",
 	Cv:  "Cv",
@@ -64,6 +66,14 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 		padding: 5px 15px 5px 5px;
 	}
 
+	.darkModeToggle{
+		position: absolute;
+		inset: auto auto 0 0;
+		width: 100%;
+		display: grid;
+		place-items: center;
+	}
+
 @media screen and (max-width: 600px) {
 	.headerBar {
 		width: 100%;  
@@ -97,6 +107,12 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 		color: #eaeaea;
 		text-decoration: none;
 	}
+
+	.darkModeToggle{
+		inset: 5px 5px auto auto;
+		width: auto;
+	}
+
 }
 
 @media print {
@@ -147,5 +163,8 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 				</a>
 			</div>
 		</nav>
+	</div>
+	<div class="darkModeToggle">
+		<DarkModeToggle/>
 	</div>
 </div>

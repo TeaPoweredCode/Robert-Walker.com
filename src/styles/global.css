@@ -2,10 +2,16 @@
 
 :root {
 	--bg:#fff;
-	--bg-dark:#17181c;
-
 	--color:#000;
-	--color-dark:#fff;
+	--svgFill:#191919;
+	--a: #2917e4;
+}
+
+:root.dark {
+	--bg:#17181c;
+	--color:#d5dbdc;
+	--svgFill:#eaeaea;
+	--a: #809fff;
 }
 
 * {
@@ -14,11 +20,12 @@
 
 html {
 	font-family: Roboto;
+	background-color: var(--bg);
+	color: var(--color);
 }
 
-html.dark {
-	background-color: #17181c;
-	color: var(--color-dark);
+svg {
+	fill: var(--svgFill);
 }
 
 body {
@@ -27,7 +34,23 @@ body {
 	line-height: 1.5;
 }
 
+a{
+	color: var(--a);
+}
+
 @media print {
+	html {
+		font-family: Roboto;
+		background-color: #fff;
+		color: #000;
+	}
+
+	body {
+		margin: 0;
+		padding: 0rem;
+		line-height: 1.5;
+	}
+
 	.pagebrake {
 		page-break-after: always;
 	}
