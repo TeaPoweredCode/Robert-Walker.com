@@ -51,10 +51,6 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 		width: 50px;
 	}
 
-	.moblieNav {
-		display: none;
-	}
-
 	.headerText {
 		display: flex;
 		flex-direction: column;
@@ -93,7 +89,12 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 		display: none;
 	}
 
-	.moblieNav {
+	.darkModeToggle{
+		inset: 5px 5px auto auto;
+		width: auto;
+	}
+
+	nav{
 		margin: 0 0 0 5px;
 		flex: 1;
 		align-items: center;
@@ -101,16 +102,6 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 		display: flex;
 		flex-direction: row;
 		gap: 15px;
-	}
-
-	.moblieNav a {
-		color: #eaeaea;
-		text-decoration: none;
-	}
-
-	.darkModeToggle{
-		inset: 5px 5px auto auto;
-		width: auto;
 	}
 
 }
@@ -129,7 +120,7 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 			<h2>Robert Walker</h2>
 			<h3>Software Engineer</h3>
 		</div>
-		<HeaderBarInfo icon="codeLaptop">
+		<HeaderBarInfo icon="codeLaptop" class="hideSmall">
 			<ul>
 				<li> Full stack web </li>
 				<li> Desktop </li>
@@ -137,31 +128,19 @@ const currentPage = page === "cv" ? ePages.Cv : ePages.Projects;
 			</ul>
 		</HeaderBarInfo>
 		<nav>
-			<HeaderBarInfo icon="locationDot" link="https://www.google.com/maps/place/Sheffield">			
+			<HeaderBarInfo icon="locationDot" link="https://www.google.com/maps/place/Sheffield" class="hideSmall">			
 				Sheffield , UK
 			</HeaderBarInfo>
-			<HeaderBarInfo icon="github" link="https://github.com/TeaPoweredCode">
+			<HeaderBarInfo icon="github" link="https://github.com/TeaPoweredCode" class="orderSmall">
 				TeaPoweredCode
 			</HeaderBarInfo>
 			<hr>
-			<HeaderBarInfo icon="projects" link="/projects" class={currentPage == ePages.Projects ? "currentPage" : undefined }>
+			<HeaderBarInfo icon="projects" link="/projects" currentPage={currentPage == ePages.Projects}>
 				Projects
 			</HeaderBarInfo>
-			<HeaderBarInfo icon="cv" link="/cv" class={currentPage == ePages.Cv ? "currentPage" : undefined }>
+			<HeaderBarInfo icon="cv" link="/cv" currentPage={currentPage == ePages.Cv}>
 				Cv
 			</HeaderBarInfo>
-
-			<div class="moblieNav">
-				<a href="/projects" class={currentPage == ePages.Projects ? "currentPage" : undefined }>
-					<HeaderBarIcon icon="projects" /> Projects
-				</a>
-				<a href="/cv" class={currentPage == ePages.Cv ? "currentPage" : undefined }>
-					<HeaderBarIcon icon="cv" /> Cv
-				</a>
-				|<a href="https://github.com/TeaPoweredCode" target="_blank"  rel="noopener noreferrer">
-					<HeaderBarIcon icon="github" /> Github
-				</a>
-			</div>
 		</nav>
 	</div>
 	<div class="darkModeToggle">

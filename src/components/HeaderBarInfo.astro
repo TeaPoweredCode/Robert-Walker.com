@@ -1,7 +1,7 @@
 ---
 import HeaderBarIcon from "./HeaderBarIcon.astro";
 
-const { icon , link , class: className } = Astro.props;
+const { icon , link , class: className , currentPage } = Astro.props;
 const isExternal = /^https?:\/\//.test(link);
 ---
 <style>
@@ -23,15 +23,21 @@ const isExternal = /^https?:\/\//.test(link);
 	}
 
 @media screen and (max-width: 600px) {
-	div{
+	.hideSmall{
 		display: none;
+	}
+	.orderSmall{
+		order: 8;
+	}
+	.orderSmall::before {
+		content: "|";
 	}
 }
 </style>
 
-<div>
+<div class={className} >
 	{link ? 
-		<a href={link} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} class={className}>
+		<a href={link} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} class={currentPage ? "currentPage" : undefined}>
 			<HeaderBarIcon icon={icon} />
 			<slot />
 		</a>
