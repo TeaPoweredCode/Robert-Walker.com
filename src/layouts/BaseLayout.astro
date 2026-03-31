@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import HeaderBar from '../components/HeaderBar.astro';
+import { Font } from "astro:assets";
 
 const {page, pageTitle } = Astro.props;
 ---
@@ -33,6 +34,8 @@ const {page, pageTitle } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+
+		<Font cssVariable="--font-roboto" />
 	</head>
 	<body>
 		<div class="flex">

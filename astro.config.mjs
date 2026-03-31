@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 import mdx from '@astrojs/mdx';
 
@@ -8,5 +8,13 @@ export default defineConfig({
   vite: {
     plugins: []
   },
-  integrations: [mdx()]
+  integrations: [mdx()],
+  fonts: [{
+    provider: fontProviders.google(),
+    name: "Roboto",
+    cssVariable: "--font-roboto",
+    subsets: ["latin"],
+    weights: [300,400,500,700],
+    styles: ["normal"],
+  }]
 });
