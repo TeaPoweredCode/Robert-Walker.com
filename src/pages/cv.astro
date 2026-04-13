@@ -74,7 +74,7 @@ const pageTitle = "Robert Walker • CV";
 		margin-bottom: 5px;	
 	}
 
-	.education span{
+	.education span {
 		font-weight: bold;
 	}
 
@@ -94,7 +94,7 @@ const pageTitle = "Robert Walker • CV";
 @media print {
 	.cv {
 		max-width: 900px;
-		margin: 10px;
+		margin: 30px 10px 10px 10px;
 		padding: 0;
 	}
 }
@@ -105,13 +105,13 @@ const pageTitle = "Robert Walker • CV";
 		<div class="header">
 			<h1 >Robert Walker</h1>
 			<div class="contactDetails">
-				<div >Robert-Walker.com</div>
-				<div>github.com/TeaPoweredCode</div>
+				<div>Linkedin: robert-walker-uk</div>
+				<div>Site: robert-walker.com</div>
 				<div>Email: email@Robert-Walker.com</div>
 				<div></div>
 			</div>
 			<hr/>
-			Sheffield UK based Software Engineer specialising in Windows desktop applications and web development, with over 10 years industry experience.
+			Sheffield UK based Software Engineer specialising in full-stack web and desktop development, with over 10 years industry experience across multiple sectors.
 		</div>
 
 		<div class="experience">
@@ -121,14 +121,14 @@ const pageTitle = "Robert Walker • CV";
 			Core Skills:
 				<ul>
 					<li> PHP <ul><li> Laravel and Livewire</li></ul></li>
-					<li> C# <ul><li> WPF / Winform</li></ul></li>
+					<li> C# </li>
 					<li> Node</li>
-					<li> Frontend Technologies <ul><li>HTML / CSS / Tailwind</li><li>Javascript</li><li>React</li></ul></li>
-					<li> Database Technologies <ul><li>MySQL / SQL / SQLite</li><li>PostgreSQL</li> <li>Redis </li></ul></li>
+					<li> Frontend Technologies <ul><li>HTML / CSS / Javascript</li><li>Tailwind</li><li>React</li><li>Astro</li></ul></li>
+					<li> Database Technologies <ul><li>MySQL / SQL / SQLite</li><li>Postgres</li> <li>Redis </li></ul></li>
 				</ul>
 			</div>
 			<div>
-				Other Industry experience:
+				Other experience:
 				<ul>
 					<li> VB</li>
 					<li> Mobile development<ul><li>Android development (Java)</li><li>Flutter</li></ul></li>
@@ -142,28 +142,33 @@ const pageTitle = "Robert Walker • CV";
 
 		<div class="employment">
 			<h3>Employment</h3>
-			<EmploymentPlace jobTitle="Senior PHP / Laravel Developer" place="reach." site="reachstudios.co.uk" siteUrl="https://reachstudios.co.uk/" time="April 2023 - January 2024">			
+
+			<div style="margin-bottom: 10px;">
+				After quitting Reach I've taken some time to support my partner with some health issues.
+				As of April 2026 she is back in full time employment and I'm looking for a new position.
+			</div>
+
+			<EmploymentPlace place="reach." jobTitle="Senior PHP / Laravel Developer" site="reachstudios.co.uk" siteUrl="https://reachstudios.co.uk/" time="April 2023 - January 2024">			
 			<ul>
 				{
-					["Developed and maintained multiple web applications using the Tall Stack (Tailwind CSS, Alpine.js, Laravel, and Livewire).",
-					"Worked as a full stack developer; Implementing frontends by following provided figma designs and independently, building complex backends and designing databases.",
-					"Collaborating with clients to help spec and create new projects aswell as provide ongoing support for existing ones.",
-					"Worked across teams to collaborate and aid with company's other disciplines such as React, mobile (Flutter , Objective-C) and design.",
+					["Worked as a full-stack developer using the Tall (Tailwind CSS, Alpine.js, Laravel, and Livewire) Stack. Designed, developed and maintained multiple web applications.",
+					"Lead projects, liaising with clients to help spec and create new projects well as as provide ongoing support for existing ones.",
+					"Collaborated across the company's other disciplines such as React, mobile (Flutter and Objective-C) and design teams.",
 					"Mentored and trained apprentices, enhancing their programming skills and understanding of core software development concepts.",
 					].map((task) => (<li>{task}</li>))
 				}
 			</ul>
 			</EmploymentPlace>
 
-			<EmploymentPlace jobTitle="Software Engineer" place="GWD" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - January 2023" >
+			<EmploymentPlace place="GWD" jobTitle="Software Engineer" site="gwd.team" siteUrl="https://gwd.team/" time="June 2021 - January 2023" >
 			<ul>
 			{
 				[`Contributed to the development of "Donation Station" and "Discovery Station" products.
-				 Applications written in React and packaged as Windows desktop app using NW.js.`,
-				"Developed C# web service APIs for hardware interactions (card payment devices, RFID reads, barcode readers).",
-				"Developed C# desktop applications to for hardware testing and device setup.",
-				`Worked to expand the product base developing "Experiential Giving", 
-				 a companion system to work along side the Donation Station designed to help drive engagement and visibility.`,
+				 Applications written in React and packaged as Windows desktop apps using NW.js.`,
+				"Integrated hardware into a C# web API service that handled device input for the React apps.",
+				"Developed C# desktop applications for hardware testing and device setup.",
+				`Expand the product base, prototyping and pitching "Experiential Giving" 
+				 a companion system for the Donation Station designed to help drive engagement and visibility.`,
 				].map((task) => (<li>{task}</li>))
 			}
 			</ul>
@@ -171,20 +176,20 @@ const pageTitle = "Robert Walker • CV";
 			
 			<div class="pagebrake"></div>
 
-			<EmploymentPlace jobTitle="Software Engineer" place="Pryor Marking Technology" site="Pryormarking.com" siteUrl="http://www.pryormarking.com/" time="June 2013 - June 2021">								
+			<EmploymentPlace place="Pryor Marking Technology" jobTitle="Software Engineer" site="Pryormarking.com" siteUrl="http://www.pryormarking.com/" time="June 2013 - June 2021">								
 			<ul>
 			{
 				["Developed complex Windows desktop applications written in C# and VB.",
 				"Integrated hardware such as ABB Robots, RFID readers and Cognex vision systems.",
-				"Worked closely with clients such as Rolls Royce and Jaguar Land Rover to create custom modules and bespoke solutions.",
-				"Built a range of web based tools with php and Laravel for managing software licenses, bespoke ticketing system and documentation system.",
-				"Made mobile applications on Android for tracking parts though production lines."
+				"Worked closely with clients such as Rolls-Royce and Jaguar Land Rover to create custom modules and bespoke solutions.",
+				"Built a range of web tools with php and Laravel for managing software licenses, a bespoke ticketing system and documentation system.",
+				"Made Android applications for tracking parts though production lines and reducing errors."
 				].map((task) => (<li>{task}</li>))
 			}
 			</ul>
 			</EmploymentPlace>
 
-			<EmploymentPlace jobTitle="Managing Director" place="IOAIS" time="June 2011 - September 2012">
+			<EmploymentPlace place="IOAIS" jobTitle="Managing Director" time="June 2011 - September 2012">
 			<ul>
 			{
 				["Co-founded a web design and software development company as part of a university enterprise scheme during my placement year.",
